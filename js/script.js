@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
       description: "A classic wooden frame perfect for a large family portrait. High-quality finish.",
       category: "frames",
       image: "images/frame.png",
-      price: 999,
+      price: 1,
       originalPrice: 1299,
       isTrending: true
     },
@@ -292,8 +292,8 @@ document.addEventListener('DOMContentLoaded', () => {
     summaryTotal.textContent = `₹${total}`;
 
     // Update UPI Link & QR
-    const upiLink = `upi://pay?pa=${UPI_ID}&pn=${encodeURIComponent(UPI_NAME)}&am=${total}&cu=INR&tn=${encodeURIComponent(prodName)}`;
-    
+    const upiLink = `upi://pay?pa=${UPI_ID}&pn=${encodeURIComponent(UPI_NAME)}&am=${total.toFixed(2)}&cu=INR&tn=${encodeURIComponent(prodName)}`;
+
     const payNowBtn = document.getElementById('payNowBtn');
     if (payNowBtn) payNowBtn.href = upiLink;
 
@@ -361,16 +361,16 @@ document.addEventListener('DOMContentLoaded', () => {
   // Handle Form Submit
   orderForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    
+
     if (!orderForm.checkValidity()) {
       orderForm.reportValidity();
       return;
     }
-    
+
     const isPhoneValid = validatePhone();
-    
+
     if (!isPhoneValid) {
-      return; 
+      return;
     }
 
     const name = document.getElementById('custName').value.trim();
@@ -395,7 +395,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.open(waLink, '_blank');
     orderModal.classList.remove('active');
     orderForm.reset();
-    
+
     // Reset validation classes
     custPhone.classList.remove('input-success', 'input-error');
     phoneError.style.display = 'none';
