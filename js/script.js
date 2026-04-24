@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const discount = Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100);
 
     return `
-      <div class="product-card product-item" data-category="${product.category}" data-price="${product.price}">
+      <div class="product-card product-item" data-id="${product.id}" data-category="${product.category}" data-price="${product.price}" style="cursor: pointer;" onclick="window.location.href='product-details.html?id=${product.id}'">
           <div class="product-img-wrapper">
               <img src="${product.image}" alt="${product.name}">
               ${discount > 0 ? `<div class="discount-badge">${discount}% OFF</div>` : ''}
@@ -112,9 +112,9 @@ document.addEventListener('DOMContentLoaded', () => {
                   <span class="current-price">₹${product.price}</span>
                   ${product.originalPrice ? `<span class="original-price">₹${product.originalPrice}</span>` : ''}
               </div>
-              <button class="btn btn-secondary whatsapp-enquire order-now-btn" style="width: 100%;" data-name="${product.name}" data-price="${product.price}">
-                  <i class="fa-brands fa-whatsapp"></i> Order on WhatsApp
-              </button>
+              <a href="product-details.html?id=${product.id}" class="btn btn-secondary shop-now-btn" style="width: 100%;">
+                  <i class="fa-solid fa-cart-shopping"></i> Shop Now
+              </a>
           </div>
       </div>
     `;
@@ -400,4 +400,109 @@ document.addEventListener('DOMContentLoaded', () => {
     custPhone.classList.remove('input-success', 'input-error');
     phoneError.style.display = 'none';
   });
+
+  // --- Dedicated Product Details Page Logic ---
+  const pdPageContainer = document.getElementById('product-details-page-container');
+  if (pdPageContainer) {
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = urlParams.get('id');
+    const product = productsData.find(p => p.id == productId);
+
+    if (product) {
+      const typeStr = (product.category === 'gifts' || product.category === 'special') ? 'Customized' : 'Ready-made';
+      
+      const recommended = productsData
+        .filter(p => p.category === product.category && p.id !== product.id)
+        .slice(0, 4);
+      
+      let recHTML = recommended.map(p => `
+        <div class="pd-rec-card" onclick="window.location.href='product-details.html?id=${p.id}'" style="cursor:pointer;">
+          <img src="${p.image}" alt="${p.name}">
+          <h4>${p.name}</h4>
+          <div class="price">₹${p.price}</div>
+        </div>
+      `).join('');
+      
+      if(recommended.length === 0) {
+         recHTML = '<p style="grid-column: 1/-1; text-align: center; color: var(--text-light);">No similar products found.</p>';
+      }
+
+      pdPageContainer.innerHTML = `
+        <div class="product-details-page">
+          <div class="pd-content">
+            <div class="pd-image-sec">
+              <img id="pdImage" src="${product.image}" alt="${product.name}">
+            </div>
+            <div class="pd-info-sec">
+              <div>
+                <h2 class="pd-title">${product.name}</h2>
+                <p class="pd-short-desc">${product.description}</p>
+                <div class="pd-prices">
+                  <span class="pd-price">₹${product.price}</span>
+                  ${product.originalPrice ? `<span class="pd-original-price" style="text-decoration: line-through; color: #adb5bd; font-size: 1.2rem;">₹${product.originalPrice}</span>` : ''}
+                </div>
+              </div>
+              
+              <div class="pd-detailed-info">
+                <span class="pd-section-title">Product Information</span>
+                <p>This is a premium quality product crafted with care to ensure the best experience and durability.</p>
+                <p><strong>Type:</strong> <span>${typeStr}</span></p>
+                <div class="pd-badge">Customization Available</div>
+              </div>
+
+              <div class="pd-delivery">
+                <span class="pd-section-title">Delivery Service</span>
+                <ul>
+                  <li>Delivery available in selected areas.</li>
+                  <li>Estimated delivery time: 2-5 working days.</li>
+                  <li>Local delivery and store pickup available.</li>
+                </ul>
+              </div>
+
+              <div class="pd-conditions">
+                <span class="pd-section-title">Service Conditions</span>
+                <ul>
+                  <li>Customized products require advance payment.</li>
+                  <li>No cancellation after order confirmation.</li>
+                  <li>Slight variation may occur in customized designs.</li>
+                </ul>
+              </div>
+
+              <div class="pd-actions">
+                <button class="btn btn-primary whatsapp-btn-green pd-order-btn" id="pdPageOrderBtn" style="color:white; flex: 2;">
+                  <i class="fa-brands fa-whatsapp"></i> Order on WhatsApp
+                </button>
+                <a href="tel:+91${WA_NUMBER}" class="btn btn-secondary pd-call-btn" style="flex: 1;">
+                  <i class="fa-solid fa-phone"></i> Call Now
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="pd-recommended">
+            <h3>You May Also Like</h3>
+            <div class="pd-rec-grid">
+              ${recHTML}
+            </div>
+          </div>
+        </div>
+      `;
+
+      // Set up Order button logic to open order modal
+      document.getElementById('pdPageOrderBtn').onclick = () => {
+        hiddenProductName.value = product.name;
+        hiddenProductPrice.value = product.price;
+        orderQty.value = 1;
+
+        summaryName.textContent = product.name;
+        summaryPrice.textContent = `₹${product.price}`;
+        updateTotal();
+
+        orderModal.classList.add('active');
+      };
+
+    } else {
+      pdPageContainer.innerHTML = '<div style="text-align: center; padding: 4rem;"><h2>Product not found.</h2><a href="products.html" class="btn btn-primary" style="margin-top: 1rem;">Back to Products</a></div>';
+    }
+  }
+
 });

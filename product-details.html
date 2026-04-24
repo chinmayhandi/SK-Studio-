@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products & Gallery | SK Studios Gifts</title>
+    <title>Product Details | SK Studios Gifts</title>
     <meta name="description"
-        content="View our collection of photo frames, customized gifts, and special speaking frames.">
+        content="View detailed information about our premium gifts, frames, and personalized items.">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
@@ -24,7 +24,7 @@
             <nav class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
-                <a href="products.html" class="active">Products / Gallery</a>
+                <a href="products.html">Products / Gallery</a>
                 <a href="contact.html">Contact</a>
                 <a href="https://instagram.com/skstudios_demo" target="_blank"><i
                         class="fa-brands fa-instagram"></i></a>
@@ -33,46 +33,10 @@
         </div>
     </header>
 
-    <!-- Page Header -->
-    <div style="background: var(--bg-light); padding: 10rem 2rem 5rem; text-align: center;">
-        <h1 style="color: var(--text-dark); margin-bottom: 1rem;">Our Product Collection</h1>
-        <p style="color: var(--text-light); max-width: 600px; margin: 0 auto;">Browse through our curated selection of
-            premium gifts, frames, and personalized items.</p>
+    <!-- Main Content for Product Details -->
+    <div style="padding-top: 8rem;" id="product-details-page-container">
+        <!-- Content injected by JS -->
     </div>
-
-    <!-- Gallery Section -->
-    <section class="section" style="padding-top: 3rem;">
-        <div class="container">
-
-            <!-- Filters -->
-            <div class="filter-controls"
-                style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; margin-bottom: 2rem; gap: 1rem;">
-                <div class="filter-container" style="margin-bottom: 0;">
-                    <button class="filter-btn active" data-filter="all">All Products</button>
-                    <button class="filter-btn" data-filter="frames">Photo Frames</button>
-                    <button class="filter-btn" data-filter="gifts">Customized Gifts</button>
-                    <button class="filter-btn" data-filter="special">Special Frames</button>
-                    <button class="filter-btn budget-btn" data-filter="budget"
-                        style="border-color: #25D366; color: #25D366;"><i class="fa-solid fa-tag"></i> Budget Gifts (
-                        <₹500)< /button>
-                </div>
-                <div class="sort-container">
-                    <label for="price-sort" style="font-weight: 600; margin-right: 0.5rem;">Sort By:</label>
-                    <select id="price-sort"
-                        style="padding: 0.6rem; border-radius: var(--radius-sm); border: 1px solid var(--primary-color); outline: none; font-family: inherit; color: var(--text-dark); cursor: pointer;">
-                        <option value="default">Recommended</option>
-                        <option value="low-high">Price: Low to High</option>
-                        <option value="high-low">Price: High to Low</option>
-                    </select>
-                </div>
-            </div>
-
-            <!-- Products -->
-            <div class="product-grid" id="products-grid-container">
-                <!-- Products injected via JS -->
-            </div>
-        </div>
-    </section>
 
     <!-- Floating Buttons -->
     <div class="floating-buttons">
