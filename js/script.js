@@ -98,6 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if(modalImg && modal) {
           modalImg.src = this.src;
           modal.style.display = 'flex';
+          document.body.style.overflow = 'hidden';
         }
       };
       
@@ -322,7 +323,6 @@ function proceedToCheckout() {
   }
   
   const qty = document.getElementById('pd-qty').value;
-  const msg = document.getElementById('pd-msg').value;
 
   // Save data to session storage
   const orderData = {
@@ -331,8 +331,7 @@ function proceedToCheckout() {
     price: finalPrice,
     size: size,
     qty: qty,
-    photoCount: product.photoCount,
-    msg: msg
+    photoCount: product.photoCount
   };
   
   sessionStorage.setItem('pendingOrder', JSON.stringify(orderData));
@@ -353,6 +352,7 @@ function confirmWhatsAppOrder(e) {
   const phone = document.getElementById('chk-phone').value;
   const pincode = document.getElementById('chk-pincode').value;
   const address = document.getElementById('chk-address').value;
+  const instructions = document.getElementById('chk-instructions').value;
 
   // Construct WhatsApp Message
   let waMessage = `Hello Sk Studio Gift,\n\n`;
@@ -364,13 +364,17 @@ function confirmWhatsAppOrder(e) {
   waMessage += `Quantity: ${data.qty}\n`;
   waMessage += `Required Photos: ${data.photoCount} (Sending soon in Document Format)\n\n`;
   
+  if (instructions) {
+    waMessage += `Special Instructions: ${instructions}\n\n`;
+  }
+  
   waMessage += `Delivery Option: ${deliveryOption}\n`;
   waMessage += `Customer Name: ${name}\n`;
   waMessage += `Phone Number: ${phone}\n`;
   
   if (deliveryOption === 'Home Delivery') {
-    waMessage += `Address: ${address}\n`;
     waMessage += `Pincode: ${pincode}\n`;
+    waMessage += `Address: ${address}\n`;
   }
   waMessage += `\n`;
   

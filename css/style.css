@@ -844,6 +844,7 @@ footer {
   .product-details-container { grid-template-columns: 1fr; }
   .shop-layout { flex-direction: column; }
   .shop-sidebar { width: 100%; }
+  .product-gallery { position: relative; top: 0; }
 }
 
 @media (max-width: 768px) {

@@ -37,7 +37,7 @@ const products = [
     "id": 3,
     "category": "Photo Frames",
     "name": "Premium Photo Frame 3",
-    "price": 499,
+    "price": 399
     "oldPrice": 699,
     "image": "images/Frames/frame-3.jpeg",
     "sizes": [

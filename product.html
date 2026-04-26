@@ -85,10 +85,7 @@
             </div>
           </div>
           
-          <div class="form-group">
-            <textarea id="pd-msg" class="form-control" placeholder="Any special instructions or custom text for the gift (Optional)" style="height:60px; resize:vertical;"></textarea>
-          </div>
-          
+          <!-- Message box moved to checkout.html -->
           <div style="display:flex; gap:15px; margin-top:20px;">
             <button type="button" class="btn-primary" style="flex:1; padding:15px; font-size:1.1rem; width:100%;" onclick="proceedToCheckout()">
               Proceed to Checkout
@@ -118,7 +115,7 @@
   </div>
 
   <!-- Image Zoom Modal -->
-  <div id="image-modal" style="display:none; position:fixed; z-index:9999; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); align-items:center; justify-content:center; cursor:pointer;" onclick="this.style.display='none'">
+  <div id="image-modal" style="display:none; position:fixed; z-index:999999; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.95); backdrop-filter:blur(5px); align-items:center; justify-content:center; cursor:pointer;" onclick="this.style.display='none'; document.body.style.overflow='';">
     <span style="position:absolute; top:20px; right:30px; color:white; font-size:40px; font-weight:bold;">&times;</span>
     <img id="modal-img" src="" style="max-width:95%; max-height:95%; object-fit:contain; border-radius:5px;">
   </div>
@@ -130,21 +127,36 @@
         <div class="footer-col">
           <h3 style="color:var(--secondary-color); font-size:1.8rem;">Sk Studio Gift</h3>
           <p>Personalized Gifts Made With Love. Your premium destination for customized keepsakes in Nidagundi.</p>
+          <div class="footer-socials">
+            <a href="https://www.instagram.com/sk_studio_gifts01?igsh=MThpdHVxa2ZpZGdzNQ%3D%3D" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://youtube.com/@Skstudio-jb3mg?si=tQig5l_9pRB_O5Yz" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://wa.me/917090924592" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          </div>
         </div>
         <div class="footer-col">
           <h3>Shop</h3>
           <a href="products.html?category=Photo+Frames">Photo Frames</a>
           <a href="products.html?category=LED+Frames">LED Frames</a>
+          <a href="products.html?category=Couple+Gifts">Couple Gifts</a>
+          <a href="products.html?category=Birthday+Gifts">Birthday Gifts</a>
         </div>
         <div class="footer-col">
           <h3>Company</h3>
           <a href="about.html">About Us</a>
           <a href="contact.html">Contact Us</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="faq.html">FAQ</a>
         </div>
         <div class="footer-col">
           <h3>Help</h3>
-          <p style="font-weight:bold; color:white;"><i class="fab fa-whatsapp" style="color:#25D366;"></i> Support: +91 7090924592</p>
+          <a href="policies.html">Shipping Policy</a>
+          <a href="policies.html">Return Policy</a>
+          <a href="policies.html">Terms of Service</a>
+          <p style="margin-top:20px; font-weight:bold; color:white;"><i class="fab fa-whatsapp" style="color:#25D366;"></i> Support: +91 7090924592</p>
         </div>
+      </div>
+      <div style="text-align:center; border-top:1px solid #333; padding-top:20px; font-size:0.9rem; color:#888;">
+        &copy; 2026 Sk Studio Gift. All Rights Reserved.
       </div>
     </div>
   </footer>
