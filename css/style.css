@@ -462,6 +462,10 @@ header {
 .filter-checkbox:hover { color: var(--primary-color); }
 .filter-checkbox input { accent-color: var(--primary-color); width: 16px; height: 16px; }
 
+#mobile-filter-btn {
+  display: none;
+}
+
 .price-range-slider {
   width: 100%;
   margin: 15px 0;
@@ -516,7 +520,8 @@ header {
 .main-image {
   width: 100%;
   height: 500px;
-  object-fit: cover;
+  object-fit: contain;
+  background: #fcfcfc;
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
   margin-bottom: 20px;
@@ -842,6 +847,10 @@ footer {
 }
 
 @media (max-width: 768px) {
+  #mobile-filter-btn { display: block; }
+  .shop-sidebar-content { display: none; }
+  .shop-sidebar-content.active { display: block; }
+  
   .nav-left { gap: 15px; }
   .nav-links {
     position: fixed;

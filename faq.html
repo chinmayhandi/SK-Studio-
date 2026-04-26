@@ -7,9 +7,61 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
   <style>
-    .faq-item { background: var(--bg-light); border-radius: var(--radius-md); margin-bottom: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color); }
-    .faq-question { padding: 20px; font-weight: 600; color: var(--text-dark); cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
-    .faq-answer { padding: 0 20px 20px; color: var(--text-muted); display: block; border-top: 1px solid var(--border-color); margin-top: 10px; padding-top: 15px; }
+    .faq-category-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin: 40px 0 15px 0;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border-color);
+    }
+    .faq-item { 
+      background: var(--bg-light); 
+      border-radius: var(--radius-md); 
+      margin-bottom: 15px; 
+      box-shadow: 0 2px 5px rgba(0,0,0,0.02); 
+      border: 1px solid var(--border-color);
+      overflow: hidden;
+      transition: var(--transition);
+    }
+    .faq-question { 
+      padding: 20px; 
+      font-weight: 600; 
+      font-size: 0.95rem;
+      color: var(--text-dark); 
+      cursor: pointer; 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+      background: #ffffff;
+    }
+    .faq-question:hover {
+      background: #fafafa;
+    }
+    .faq-answer { 
+      padding: 0 20px; 
+      color: var(--text-muted); 
+      font-size: 0.9rem;
+      line-height: 1.6;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+    .faq-item.active .faq-answer {
+      padding: 0 20px 20px 20px;
+      max-height: 500px;
+    }
+    .faq-item.active .faq-question {
+      border-bottom: 1px solid var(--border-color);
+    }
+    .faq-icon {
+      color: var(--primary-color);
+      transition: transform 0.3s ease;
+      font-size: 0.8rem;
+    }
+    .faq-item.active .faq-icon {
+      transform: rotate(180deg);
+    }
   </style>
 </head>
 <body>
@@ -29,23 +81,66 @@
     </div>
   </header>
 
-  <section class="container" style="padding: 80px 0; max-width: 800px;">
+  <section class="container" style="padding: 60px 0; max-width: 800px;">
     <div class="section-title"><h2>Frequently Asked Questions</h2></div>
     
+    <!-- Category 1 -->
+    <div class="faq-category-title">Ordering & Customization</div>
+    
     <div class="faq-item">
-      <div class="faq-question">How do I send photos for my customized order? <i class="fas fa-chevron-down"></i></div>
-      <div class="faq-answer">You can upload the required photos directly on the product order page. After submitting the details, you will be redirected to WhatsApp. Please attach and send the same photos in the WhatsApp chat to confirm your order.</div>
+      <div class="faq-question">How do I place an order for a customized gift? <i class="fas fa-chevron-down faq-icon"></i></div>
+      <div class="faq-answer">To place an order, select your desired product, choose customization options (like size), and click "Proceed to Checkout". Enter your delivery details and click "Confirm & Order via WhatsApp". Our system will automatically format your order details and send them to us on WhatsApp.</div>
     </div>
     
     <div class="faq-item">
-      <div class="faq-question">Do you offer cash on delivery (COD)? <i class="fas fa-chevron-down"></i></div>
-      <div class="faq-answer">Currently, all orders are processed via WhatsApp where we will provide you with payment details (UPI/Bank Transfer). Once payment is confirmed, your customized order goes into production.</div>
+      <div class="faq-question">How do I send photos for my customized order? <i class="fas fa-chevron-down faq-icon"></i></div>
+      <div class="faq-answer">Please send the required number of photos in <strong>Document Format</strong> directly on WhatsApp after confirming your order. Note: Once photos are sent and production begins, photos cannot be changed.</div>
     </div>
-    
+
     <div class="faq-item">
-      <div class="faq-question">How long does delivery take? <i class="fas fa-chevron-down"></i></div>
-      <div class="faq-answer">Customized gifts usually take 2-4 days for production. Shipping time depends on your location, generally taking another 3-5 business days.</div>
+      <div class="faq-question">Can I preview my customized gift before printing? <i class="fas fa-chevron-down faq-icon"></i></div>
+      <div class="faq-answer">Yes! After you send your photos on WhatsApp, our admin will create a design and send you a digital preview. Once you approve the preview, your gift will go into final printing and production.</div>
     </div>
+
+    <!-- Category 2 -->
+    <div class="faq-category-title">Shipping & Delivery</div>
+
+    <div class="faq-item">
+      <div class="faq-question">What are your shipping options and delivery times? <i class="fas fa-chevron-down faq-icon"></i></div>
+      <div class="faq-answer">We offer two options: "Store Collect" (Free) and "Home Delivery". Home delivery generally takes <strong>5-7 business working days</strong> after the product has been dispatched.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">How much does Home Delivery cost? <i class="fas fa-chevron-down faq-icon"></i></div>
+      <div class="faq-answer">Delivery charges are calculated based on your pincode. The exact delivery charge will be communicated to you by our admin while you are paying for your order on WhatsApp.</div>
+    </div>
+
+    <!-- Category 3 -->
+    <div class="faq-category-title">Product & Quality</div>
+
+    <div class="faq-item">
+      <div class="faq-question">What is the quality of your printed products? <i class="fas fa-chevron-down faq-icon"></i></div>
+      <div class="faq-answer">We use premium materials and state-of-the-art printing technology to ensure the highest quality. Our frames are handcrafted and designed to preserve your memories for a lifetime.</div>
+    </div>
+
+    <!-- Category 4 -->
+    <div class="faq-category-title">Payment & Pricing</div>
+
+    <div class="faq-item">
+      <div class="faq-question">Do you offer Cash on Delivery (COD)? <i class="fas fa-chevron-down faq-icon"></i></div>
+      <div class="faq-answer">No, we currently do not offer Cash on Delivery. All orders are customized and must be paid for in advance before production begins.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">How do I make a payment? <i class="fas fa-chevron-down faq-icon"></i></div>
+      <div class="faq-answer">Once your order details are confirmed on WhatsApp, the admin will send you a secure payment link or QR code (UPI/Bank Transfer).</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Are there any hidden costs? <i class="fas fa-chevron-down faq-icon"></i></div>
+      <div class="faq-answer">No hidden costs! The base price of the product is clearly shown on the website. If you choose home delivery, the exact shipping cost will be clearly communicated to you on WhatsApp before you make any payment. If there are any discount offers applied, they will be calculated on the full product price (delivery charges are not discounted).</div>
+    </div>
+
   </section>
 
   <footer>
@@ -60,5 +155,23 @@
   </footer>
 
   <script src="js/script.js"></script>
+  <script>
+    // FAQ Accordion Logic
+    document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', () => {
+        const item = question.parentElement;
+        
+        // Close all other open items
+        document.querySelectorAll('.faq-item').forEach(otherItem => {
+          if (otherItem !== item && otherItem.classList.contains('active')) {
+            otherItem.classList.remove('active');
+          }
+        });
+        
+        // Toggle current item
+        item.classList.toggle('active');
+      });
+    });
+  </script>
 </body>
 </html>

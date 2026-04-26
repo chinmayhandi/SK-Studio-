@@ -89,7 +89,18 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('pd-price').textContent = `₹${product.price}`;
       document.getElementById('pd-old-price').textContent = product.oldPrice ? `₹${product.oldPrice}` : '';
       document.getElementById('pd-desc').textContent = product.description;
-      document.getElementById('pd-main-img').src = product.image;
+      const mainImg = document.getElementById('pd-main-img');
+      mainImg.src = product.image;
+      mainImg.style.cursor = 'zoom-in';
+      mainImg.onclick = function() {
+        const modalImg = document.getElementById('modal-img');
+        const modal = document.getElementById('image-modal');
+        if(modalImg && modal) {
+          modalImg.src = this.src;
+          modal.style.display = 'flex';
+        }
+      };
+      
       document.getElementById('pd-thumb-1').src = product.image;
       
       const thumb2 = document.getElementById('pd-thumb-2');
@@ -192,9 +203,6 @@ function renderProducts(productList, container) {
         ${product.isNewArrival ? '<span class="badge">New Arrival</span>' : ''}
         <div class="wishlist-btn-overlay" onclick="event.preventDefault(); this.style.color='red';"><i class="fas fa-heart"></i></div>
         <img src="${product.image}" alt="${product.name}">
-        <div class="card-hover-action">
-          <button class="btn-primary" style="pointer-events:none;">Customize / View</button>
-        </div>
       </div>
       <div class="product-info">
         <div class="product-category">${product.category}</div>
