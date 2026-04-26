@@ -79,10 +79,11 @@
           <textarea id="chk-instructions" class="form-control" placeholder="Any special instructions or custom text for the gift (Optional)" style="height:80px; resize:vertical;"></textarea>
         </div>
 
-        <div style="background:rgba(212, 175, 55, 0.1); padding:20px; border-radius:var(--radius-sm); border:1px dashed var(--secondary-color); margin-bottom:25px; margin-top:20px;">
+        <div id="photo-instructions-section" style="background:rgba(212, 175, 55, 0.1); padding:20px; border-radius:var(--radius-sm); border:1px dashed var(--secondary-color); margin-bottom:25px; margin-top:20px;">
           <h4 style="margin-bottom:10px; color:var(--text-dark);"><i class="fas fa-exclamation-circle" style="color:var(--secondary-color);"></i> Important Instructions</h4>
-          <p style="margin-bottom:10px; font-size:0.95rem;">You need to send <strong><span id="chk-photo-count"></span></strong> required photo(s) on WhatsApp in <strong>Document Format</strong>.</p>
-          <p style="font-size:0.9rem; color:red; font-weight:600;">Note: Once you send the photos on WhatsApp, they cannot be changed.</p>
+          <p style="margin-bottom:10px; font-size:0.95rem;">You need to send <strong><span id="chk-photo-count"></span></strong> required photo(s) on WhatsApp.</p>
+          <p style="margin-bottom:10px; font-size:0.9rem; color:var(--text-muted);"><strong>Accepted Formats:</strong> Document Format (PDF/DOC), JPEG, JPG, PNG, HEIF.</p>
+          <p style="font-size:0.9rem; color:red; font-weight:600;">Note: Please make sure to send the photos immediately after confirming the order.</p>
         </div>
 
         <div style="display:flex; gap:15px;">
@@ -94,6 +95,28 @@
           </button>
         </div>
       </form>
+    </div>
+  </div>
+
+  <!-- Checkout Instructions Modal -->
+  <div id="checkout-instructions-modal" class="instructions-modal-overlay">
+    <div class="instructions-modal-content">
+      <div class="instructions-modal-header">
+        <h3><i class="fas fa-exclamation-triangle" style="color: var(--secondary-color);"></i> Important Order Instructions</h3>
+      </div>
+      <div class="instructions-modal-body">
+        <ul class="instructions-list">
+          <li><strong>1.</strong> Your order details will be sent to the shop owner through WhatsApp.</li>
+          <li><strong>2.</strong> After placing the order, please make the payment according to the Order Summary total amount and send the payment screenshot to the shop owner on WhatsApp.</li>
+          <li><strong>3.</strong> If your product requires photos, you must send the required number of photos manually in the WhatsApp chat. If you do not send the required photos, the shop is not responsible and the paid amount will not be refunded.</li>
+          <li><strong>4.</strong> If you choose Store Pickup, your order will be ready approximately 45 minutes after successful payment.</li>
+          <li><strong>5.</strong> If you choose Home Delivery, delivery may take 5–7 business days.</li>
+          <li><strong>6.</strong> Once payment is completed, the amount is non-refundable.</li>
+        </ul>
+      </div>
+      <div class="instructions-modal-footer">
+        <button type="button" class="btn-primary" id="btn-understand-instructions" style="width: 100%;">I Understand</button>
+      </div>
     </div>
   </div>
 

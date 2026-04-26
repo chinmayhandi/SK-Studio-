@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,13 +8,16 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
   <header>
     <div class="container navbar">
       <div class="nav-left">
         <div class="menu-toggle"><i class="fas fa-bars"></i></div>
-        <div class="logo"><a href="index.html"><h1>Sk Studio <span>Gift</span></h1></a></div>
+        <div class="logo"><a href="index.html">
+            <h1>Sk Studio <span>Gift</span></h1>
+          </a></div>
       </div>
       <nav class="nav-links">
         <a href="index.html">Home</a>
@@ -24,26 +28,158 @@
     </div>
   </header>
 
-  <section class="hero" style="height: 30vh; background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=1920&q=80');">
+  <section class="hero"
+    style="height: 30vh; background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=1920&q=80');">
     <div class="hero-content">
       <h2 style="margin:0;">About Us</h2>
     </div>
   </section>
 
+  <!-- Our Story & Shop Photos -->
   <section class="container" style="padding: 80px 0;">
-    <div class="section-title">
-      <h2>Our Story</h2>
+    <div class="about-grid">
+      <div class="about-story">
+        <div class="section-title" style="text-align: left; margin-bottom: 20px;">
+          <h2 style="margin: 0;">Our Story</h2>
+        </div>
+        <p class="story-text">
+          Sk Studio Gift is a premium customized gift shop based in Nidagundi, Karnataka. We started with a simple
+          belief: that every gift should tell a story, capture a precious moment, and hold a special memory.
+        </p>
+        <p class="story-text">
+          Over time, we have grown into a trusted local destination offering a wide range of personalized items. From
+          high-quality photo frames and glowing LED frames to romantic couple gifts, birthday surprises, elegant wedding
+          gifts, and thoughtful return gifts.
+        </p>
+        <p class="story-text">
+          Our goal is to provide top-notch craftsmanship with an emotional touch. We pride ourselves on creating a
+          customer-friendly experience, ensuring that your customized gifts are not just products, but timeless memories
+          made with love.
+        </p>
+
+        <!-- Social Media Buttons -->
+        <div class="about-socials">
+          <a href="https://www.instagram.com/sk_studio_gifts01?igsh=MThpdHVxa2ZpZGdzNQ%3D%3D" target="_blank"
+            class="btn-social instagram"><i class="fab fa-instagram"></i> Instagram</a>
+          <a href="https://youtube.com/@Skstudio-jb3mg?si=tQig5l_9pRB_O5Yz" target="_blank"
+            class="btn-social youtube"><i class="fab fa-youtube"></i> YouTube</a>
+          <a href="https://wa.me/917090924592" target="_blank" class="btn-social whatsapp"><i
+              class="fab fa-whatsapp"></i> WhatsApp Support</a>
+        </div>
+      </div>
+
+      <div class="about-photos">
+        <!-- Shop Photos Grid -->
+        <div class="shop-photos-grid">
+          <div class="shop-photo-card main-photo">
+            <img src="https://images.unsplash.com/photo-1555529771-835f59fc5efe?auto=format&fit=crop&w=600&q=80"
+              alt="SK Studio Inside">
+            <div class="photo-caption">Inside Our Shop</div>
+          </div>
+          <div class="shop-photo-card sub-photo-1">
+            <img src="https://images.unsplash.com/photo-1607083206968-13611e3d76db?auto=format&fit=crop&w=400&q=80"
+              alt="SK Studio Gifts Display">
+          </div>
+          <div class="shop-photo-card sub-photo-2">
+            <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=400&q=80"
+              alt="Customized Gifts">
+          </div>
+        </div>
+      </div>
     </div>
-    <div style="max-width: 800px; margin: 0 auto; text-align: center; font-size: 1.1rem; color: var(--text-muted);">
-      <p style="margin-bottom: 20px;">
-        Sk Studio Gift is a premium customized gift shop based in Nidagundi, Karnataka. We believe that every gift should tell a story and hold a special memory. 
-      </p>
-      <p style="margin-bottom: 20px;">
-        We offer a wide range of personalized items including high-quality photo frames, glowing LED frames, romantic couple gifts, birthday and anniversary surprises, personalized mugs, crystal gifts, keychains, and elegant wedding gifts.
-      </p>
-      <p>
-        Our goal is to provide top-notch craftsmanship with an emotional touch, ensuring that your customized gifts are not just products, but timeless memories made with love.
-      </p>
+  </section>
+
+  <!-- Meet Our Owner -->
+  <section class="container"
+    style="padding: 60px 0; background: #faf9f6; border-radius: var(--radius-lg); margin-bottom: 60px;">
+    <div class="section-title">
+      <h2>Meet Our Owner</h2>
+    </div>
+    <div class="owner-section">
+      <div class="owner-photo">
+        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80"
+          alt="Shop Owner">
+      </div>
+      <div class="owner-info">
+        <h3>Owner Name</h3>
+        <p class="owner-role">Founder, SK Studio Gifts</p>
+        <p class="owner-bio">
+          "Hello! Welcome to SK Studio Gifts. My passion has always been helping people celebrate their special moments
+          with beautiful, customized keepsakes. I personally ensure that every order is crafted with quality work and
+          care. You can trust us for excellent customer support and a seamless shopping experience."
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="container" style="padding: 60px 0;">
+    <div class="section-title">
+      <h2>Why Choose Us</h2>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-gift"></i></div>
+        <h3>Customized Gift Options</h3>
+        <p>A wide variety of personalized items for every occasion.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-gem"></i></div>
+        <h3>Quality Products</h3>
+        <p>Premium materials and top-notch craftsmanship guaranteed.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-tags"></i></div>
+        <h3>Affordable Price</h3>
+        <p>Beautiful gifts that fit perfectly within your budget.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-shipping-fast"></i></div>
+        <h3>Fast Order Processing</h3>
+        <p>Quick turnaround times to get your gifts ready when you need them.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" style="color: #25D366; background: rgba(37,211,102,0.1);"><i
+            class="fab fa-whatsapp"></i></div>
+        <h3>WhatsApp Support</h3>
+        <p>Easy ordering and friendly customer support directly via WhatsApp.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-store"></i></div>
+        <h3>Trusted Local Shop</h3>
+        <p>Proudly serving the Nidagundi community with love and trust.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shop Location -->
+  <section class="container" style="padding: 60px 0 100px;">
+    <div class="section-title">
+      <h2>Visit Our Shop</h2>
+    </div>
+    <div class="location-grid">
+      <div class="location-info">
+        <div class="address-card">
+          <div class="address-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div class="address-text">
+            <h3>SK Studio Gifts</h3>
+            <p>Near Renuka Medical, GVVS College Road,<br>Nidagundi - 586213,<br>Karnataka</p>
+          </div>
+          <a href="https://www.google.com/maps/dir/16.362173,75.939857/SK+STUDIO+%26+GIFTS,+Sk+studio+gifts,+Nidgundi,+Karnataka+586213/@16.3604271,75.9375548,386m/data=!3m2!1e3!4b1!4m17!1m7!3m6!1s0x3bc797c19b334aab:0x96a2ba757354e461!2sSK+STUDIO+%26+GIFTS!8m2!3d16.3590534!4d75.9352526!16s%2Fg%2F11gr5zkhmc!4m8!1m1!4e1!1m5!1m1!1s0x3bc797c19b334aab:0x96a2ba757354e461!2m2!1d75.9352522!2d16.3590533?entry=ttu&g_ep=EgoyMDI2MDQyMi4wIKXMDSoASAFQAw%3D%3D"
+            target="_blank" class="btn-primary"
+            style="margin-top: 25px; width: 100%; display: flex; justify-content: center; align-items: center; gap: 10px;">
+            <i class="fas fa-directions"></i> Get Direction
+          </a>
+        </div>
+      </div>
+      <div class="location-map">
+        <div class="map-container">
+          <iframe src="https://maps.google.com/maps?q=16.3590534,75.9352526&t=m&z=19&ie=UTF8&iwloc=&output=embed"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -56,8 +192,10 @@
           <h3 style="color:var(--secondary-color); font-size:1.8rem;">Sk Studio Gift</h3>
           <p>Personalized Gifts Made With Love. Your premium destination for customized keepsakes in Nidagundi.</p>
           <div class="footer-socials">
-            <a href="https://www.instagram.com/sk_studio_gifts01?igsh=MThpdHVxa2ZpZGdzNQ%3D%3D" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://youtube.com/@Skstudio-jb3mg?si=tQig5l_9pRB_O5Yz" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.instagram.com/sk_studio_gifts01?igsh=MThpdHVxa2ZpZGdzNQ%3D%3D" target="_blank"><i
+                class="fab fa-instagram"></i></a>
+            <a href="https://youtube.com/@Skstudio-jb3mg?si=tQig5l_9pRB_O5Yz" target="_blank"><i
+                class="fab fa-youtube"></i></a>
             <a href="https://wa.me/917090924592" target="_blank"><i class="fab fa-whatsapp"></i></a>
           </div>
         </div>
@@ -80,7 +218,8 @@
           <a href="policies.html">Shipping Policy</a>
           <a href="policies.html">Return Policy</a>
           <a href="policies.html">Terms of Service</a>
-          <p style="margin-top:20px; font-weight:bold; color:white;"><i class="fab fa-whatsapp" style="color:#25D366;"></i> Support: +91 7090924592</p>
+          <p style="margin-top:20px; font-weight:bold; color:white;"><i class="fab fa-whatsapp"
+              style="color:#25D366;"></i> Support: +91 7090924592</p>
         </div>
       </div>
       <div style="text-align:center; border-top:1px solid #333; padding-top:20px; font-size:0.9rem; color:#888;">
@@ -91,4 +230,5 @@
 
   <script src="js/script.js"></script>
 </body>
+
 </html>

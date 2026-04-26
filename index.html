@@ -38,6 +38,46 @@
     </div>
   </section>
 
+  <!-- Promo Banner / Offer Slider -->
+  <section class="container" style="margin-top: 50px; margin-bottom: 50px;">
+    <div class="promo-banner">
+      <div class="promo-left">
+        <!-- Decorative Icons -->
+        <i class="far fa-heart" style="position:absolute; top:15%; right:20%; color:#C6A88F; font-size:1.5rem; transform:rotate(15deg);"></i>
+        <i class="far fa-heart" style="position:absolute; top:20%; right:15%; color:#C6A88F; font-size:1rem; transform:rotate(-10deg);"></i>
+        <i class="far fa-image" style="position:absolute; top:35%; left:15%; color:#C6A88F; font-size:2.5rem; transform:rotate(-15deg);"></i>
+        <i class="far fa-images" style="position:absolute; top:45%; right:20%; color:#C6A88F; font-size:3rem; transform:rotate(10deg);"></i>
+        <i class="fab fa-envira" style="position:absolute; bottom:5%; left:5%; color:#C6A88F; font-size:4rem; transform:rotate(-45deg); opacity:0.4;"></i>
+        <i class="fab fa-envira" style="position:absolute; bottom:5%; right:10%; color:#C6A88F; font-size:2rem; transform:rotate(30deg); opacity:0.4;"></i>
+
+        <div class="promo-badge">LIMITED TIME ONLINE OFFER!</div>
+        
+        <div class="promo-text-group" style="margin-bottom: 20px;">
+          <span class="promo-number">1</span>
+          <div class="promo-text" style="padding-top: 10px;">BUY ONE<br><strong>FRAME</strong></div>
+        </div>
+        
+        <div class="promo-text-group">
+          <span class="promo-number">2</span>
+          <div class="promo-text" style="padding-top: 10px;">GET<br><strong>FRAMES</strong><br><span class="free-text">FREE!</span></div>
+        </div>
+        
+        <a href="products.html" class="btn-primary promo-btn">SHOP THE BUNDLE</a>
+      </div>
+      <div class="promo-right">
+        <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=800&q=80" alt="Frames Bundle">
+      </div>
+    </div>
+    <div class="promo-controls">
+      <i class="fas fa-chevron-left" style="cursor:pointer;"></i>
+      <i class="fas fa-heart active-dot" style="cursor:pointer;"></i>
+      <i class="far fa-circle" style="cursor:pointer;"></i>
+      <i class="far fa-circle" style="cursor:pointer;"></i>
+      <i class="fas fa-chevron-right" style="cursor:pointer;"></i>
+      <i class="fas fa-pause" style="margin-left: 15px; cursor:pointer;"></i>
+    </div>
+  </section>
+
   <!-- Categories -->
   <section class="container">
     <div class="section-title">
@@ -79,6 +119,24 @@
     </div>
     <div style="text-align: center; margin-top: 50px;">
       <a href="products.html" class="btn-outline">View Entire Collection</a>
+    </div>
+  </section>
+
+  <!-- Our Creative Portfolio -->
+  <section class="container portfolio-section" style="padding: 60px 0; background: #faf9f6; border-radius: var(--radius-lg); margin-top: 40px; margin-bottom: 40px;">
+    <div class="portfolio-header" style="text-align: center; margin-bottom: 50px;">
+      <span class="badge" style="position:relative; top:0; left:0; display:inline-block; background: #f5ece5; color: #5C4A3D; margin-bottom: 15px; padding: 6px 15px; border-radius: 20px; font-weight: 600; font-size: 0.85rem;">Inspiration Gallery</span>
+      <h2 style="font-size: 2.5rem; font-family: 'Playfair Display', serif; color: #222; margin-bottom: 10px;">Our Creative Portfolio</h2>
+      <svg width="150" height="15" viewBox="0 0 150 15" style="margin: 0 auto; display: block;"><path d="M0,10 Q75,0 150,10" stroke="#b58e6b" fill="transparent" stroke-width="3" stroke-linecap="round"/></svg>
+      <p style="color: #666; max-width: 650px; margin: 20px auto 0; font-size: 0.95rem;">Explore our stunning collection of custom designs, client creations, and artistic inspirations across various styles and formats.</p>
+    </div>
+    
+    <div class="portfolio-grid" id="home-gallery-grid">
+      <!-- Injected via JavaScript from gallery.js -->
+    </div>
+    
+    <div style="text-align: center; margin-top: 50px;">
+      <a href="gallery.html" class="portfolio-btn-outline">View Full Gallery &nbsp;<i class="fas fa-arrow-right"></i></a>
     </div>
   </section>
 
@@ -158,6 +216,7 @@
   </footer>
 
   <script src="js/products.js"></script>
+  <script src="js/gallery.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>

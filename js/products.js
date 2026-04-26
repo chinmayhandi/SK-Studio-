@@ -1,7 +1,7 @@
 const products = [
   {
     "id": 1,
-    "category": "Photo Frames",
+    "category": "Birthday Gifts",
     "name": "Premium Photo Frame 1",
     "price": 399,
     "oldPrice": 699,
@@ -20,10 +20,10 @@ const products = [
         "price": 1299
       }
     ],
-    "photoCount": 1,
+    "photoCount": 3,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": true,
-    "isNewArrival": false
+    "isNewArrival": true
   },
   {
     "id": 2,
@@ -46,7 +46,7 @@ const products = [
         "price": 1299
       }
     ],
-    "photoCount": 1,
+    "photoCount": 5,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": true,
     "isNewArrival": false
@@ -72,7 +72,7 @@ const products = [
         "price": 1299
       }
     ],
-    "photoCount": 1,
+    "photoCount": 15,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": true,
     "isNewArrival": false
@@ -105,7 +105,7 @@ const products = [
   },
   {
     "id": 5,
-    "category": "Photo Frames",
+    "category": "Wedding Gifts",
     "name": "Premium Photo Frame 5",
     "price": 499,
     "oldPrice": 699,

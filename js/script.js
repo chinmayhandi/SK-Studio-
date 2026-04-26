@@ -116,7 +116,8 @@ document.addEventListener('DOMContentLoaded', () => {
       let basePrice = product.price;
       const sizeGroup = document.getElementById('pd-size-group');
       const sizeSelect = document.getElementById('pd-size');
-      if (product.category === 'Photo Frames' && product.sizes && product.sizes.length > 0) {
+      const isFrame = product.name.toLowerCase().includes('frame') || product.category.toLowerCase().includes('frame');
+      if (isFrame && product.sizes && product.sizes.length > 0) {
         sizeGroup.style.display = 'block';
         sizeSelect.required = true;
         sizeSelect.innerHTML = '<option value="">Select Size</option>';
@@ -128,6 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Add event listener to update displayed price
         sizeSelect.addEventListener('change', function() {
+          this.classList.remove('border-error'); // Remove red border when fixed
           const selectedOption = this.options[this.selectedIndex];
           if (selectedOption.value) {
             document.getElementById('pd-price').textContent = `₹${selectedOption.getAttribute('data-price')}`;
@@ -178,10 +180,157 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('chk-qty').textContent = data.qty;
     document.getElementById('chk-price').textContent = `₹${data.price * data.qty}`;
     document.getElementById('chk-photo-count').textContent = data.photoCount;
+
+    const photoInstructions = document.getElementById('photo-instructions-section');
+    if (photoInstructions) {
+      if (data.photoCount > 0) {
+        photoInstructions.style.display = 'block';
+      } else {
+        photoInstructions.style.display = 'none';
+      }
+    }
+
+    // Modal Logic
+    const instructionsModal = document.getElementById('checkout-instructions-modal');
+    const understandBtn = document.getElementById('btn-understand-instructions');
+    
+    if (instructionsModal && understandBtn) {
+      // Show modal on load
+      setTimeout(() => {
+        instructionsModal.classList.add('show');
+        document.body.style.overflow = 'hidden'; // Prevent scrolling
+        
+        // Play Success Sound
+        playAudioAlert('success');
+        
+        // Soft tactile notification
+        if (navigator.vibrate) navigator.vibrate([50, 50, 50]);
+      }, 100);
+      
+      // Close modal on button click
+      understandBtn.addEventListener('click', () => {
+        instructionsModal.classList.remove('show');
+        document.body.style.overflow = ''; // Restore scrolling
+      });
+    }
   }
+
+  // 8. Render Dynamic Gallery
+  if (typeof galleryItems !== 'undefined') {
+    // Render Home Page Portfolio (Latest 6)
+    const homeGalleryGrid = document.getElementById('home-gallery-grid');
+    if (homeGalleryGrid) {
+      let html = '';
+      const recentItems = galleryItems.slice(0, 6);
+      recentItems.forEach(item => {
+        const iconClass = item.isVideo ? 'fas fa-play-circle play-icon' : 'fab fa-instagram play-icon';
+        const overlayClass = item.isLight ? 'portfolio-overlay-light' : 'portfolio-overlay';
+        const iconColor = item.isLight ? 'color: rgba(255,255,255,0.9);' : '';
+        html += `
+          <div class="portfolio-item" onclick="window.open('${item.link}', '_blank')">
+            <img src="${item.image}" alt="${item.title}">
+            <i class="${iconClass}" style="${iconColor}"></i>
+            <div class="${overlayClass}">
+              <h3 class="portfolio-title">${item.title}</h3>
+            </div>
+          </div>
+        `;
+      });
+      homeGalleryGrid.innerHTML = html;
+    }
+
+    // Render Gallery Page Full Grid
+    const pageGalleryGrid = document.getElementById('page-gallery-grid');
+    if (pageGalleryGrid) {
+      let html = '';
+      galleryItems.forEach(item => {
+        const iconClass = item.isVideo ? 'fas fa-play-circle play-btn' : 'fab fa-instagram play-btn';
+        html += `
+          <div class="ig-item" onclick="window.open('${item.link}', '_blank')">
+            <img src="${item.image}" alt="${item.title}">
+            <div class="ig-overlay">
+              <i class="${iconClass}"></i>
+              <span style="font-weight:600;">
+                <i class="fas fa-heart"></i> ${item.likes} &nbsp; 
+                <i class="fas fa-comment"></i> ${item.comments}
+              </span>
+            </div>
+          </div>
+        `;
+      });
+      pageGalleryGrid.innerHTML = html;
+    }
+  }
+
 });
 
 // --- HELPER FUNCTIONS ---
+
+// Global Audio Context
+let audioCtx;
+function initAudio() {
+  if (!audioCtx) {
+    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+  }
+}
+
+function playAudioAlert(type) {
+  try {
+    initAudio();
+    if (audioCtx.state === 'suspended') {
+      audioCtx.resume();
+    }
+    
+    const oscillator = audioCtx.createOscillator();
+    const gainNode = audioCtx.createGain();
+    
+    oscillator.connect(gainNode);
+    gainNode.connect(audioCtx.destination);
+    
+    if (type === 'error') {
+      // Soft double beep
+      oscillator.type = 'sine';
+      oscillator.frequency.setValueAtTime(300, audioCtx.currentTime);
+      oscillator.frequency.exponentialRampToValueAtTime(150, audioCtx.currentTime + 0.1);
+      
+      gainNode.gain.setValueAtTime(0, audioCtx.currentTime);
+      gainNode.gain.linearRampToValueAtTime(0.3, audioCtx.currentTime + 0.05);
+      gainNode.gain.linearRampToValueAtTime(0.01, audioCtx.currentTime + 0.1);
+      
+      const osc2 = audioCtx.createOscillator();
+      const gain2 = audioCtx.createGain();
+      osc2.type = 'sine';
+      osc2.frequency.setValueAtTime(300, audioCtx.currentTime + 0.15);
+      osc2.frequency.exponentialRampToValueAtTime(150, audioCtx.currentTime + 0.25);
+      
+      gain2.gain.setValueAtTime(0, audioCtx.currentTime + 0.15);
+      gain2.gain.linearRampToValueAtTime(0.3, audioCtx.currentTime + 0.2);
+      gain2.gain.linearRampToValueAtTime(0.01, audioCtx.currentTime + 0.25);
+      
+      osc2.connect(gain2);
+      gain2.connect(audioCtx.destination);
+      
+      oscillator.start(audioCtx.currentTime);
+      oscillator.stop(audioCtx.currentTime + 0.1);
+      osc2.start(audioCtx.currentTime + 0.15);
+      osc2.stop(audioCtx.currentTime + 0.25);
+    } else if (type === 'success') {
+      // Pleasant chime
+      oscillator.type = 'sine';
+      oscillator.frequency.setValueAtTime(523.25, audioCtx.currentTime); // C5
+      oscillator.frequency.setValueAtTime(659.25, audioCtx.currentTime + 0.1); // E5
+      
+      gainNode.gain.setValueAtTime(0, audioCtx.currentTime);
+      gainNode.gain.linearRampToValueAtTime(0.15, audioCtx.currentTime + 0.05);
+      gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.6);
+      
+      oscillator.start(audioCtx.currentTime);
+      oscillator.stop(audioCtx.currentTime + 0.6);
+    }
+  } catch (e) {
+    console.log("Audio not supported or blocked");
+  }
+}
 
 function renderProducts(productList, container) {
   container.innerHTML = '';
@@ -304,7 +453,33 @@ function proceedToCheckout() {
   // Validate Size if required
   const sizeSelect = document.getElementById('pd-size');
   if (sizeSelect.required && !sizeSelect.value) {
-    alert("Please select a frame size.");
+    // 1. Play Error Sound
+    playAudioAlert('error');
+    
+    // 2. Mobile Vibration
+    if (navigator.vibrate) navigator.vibrate([100]);
+    
+    // 3. Add CSS classes for shake and red border
+    sizeSelect.classList.add('shake-error', 'border-error');
+    setTimeout(() => sizeSelect.classList.remove('shake-error'), 500); // Remove shake but keep red border
+    
+    // 4. Show Custom Popup
+    let existingPopup = document.getElementById('size-warning-popup');
+    if (!existingPopup) {
+      existingPopup = document.createElement('div');
+      existingPopup.id = 'size-warning-popup';
+      existingPopup.className = 'size-warning-popup';
+      existingPopup.innerHTML = '<i class="fas fa-exclamation-circle"></i> Please select a size before continuing';
+      document.body.appendChild(existingPopup);
+    }
+    
+    // Trigger reflow for animation
+    void existingPopup.offsetWidth;
+    existingPopup.classList.add('show');
+    
+    // Hide popup after 3 seconds
+    setTimeout(() => existingPopup.classList.remove('show'), 3000);
+    
     return;
   }
 
