@@ -357,10 +357,7 @@ function renderProducts(productList, container) {
       <div class="product-info">
         <div class="product-category">${product.category}</div>
         <h3 class="product-name">${product.name}</h3>
-        <div class="ui-rating">
-          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-          <span>(12)</span>
-        </div>
+
         <div class="product-price-wrapper">
           <span class="price">₹${product.price}</span>
           ${product.oldPrice ? `<span class="old-price">₹${product.oldPrice}</span>` : ''}
