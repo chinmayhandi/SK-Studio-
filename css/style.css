@@ -1405,7 +1405,7 @@ footer {
 }
 
 @media (max-width: 480px) {
-  .product-grid { grid-template-columns: 1fr; }
+  .product-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
   .portfolio-grid { grid-template-columns: 1fr; }
   .shop-photos-grid { grid-template-columns: 1fr; grid-template-areas: "main" "sub1" "sub2"; }
   .shop-photo-card.main-photo { height: 250px; }
