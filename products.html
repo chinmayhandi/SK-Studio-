@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop - Sk Studio Gift</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Modern Header -->
+  <header>
+    <div class="container navbar">
+      <div class="nav-left">
+        <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+        <div class="logo">
+          <a href="index.html"><h1>Sk Studio <span>Gift</span></h1></a>
+        </div>
+      </div>
+      
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="products.html" class="active">Shop</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="hero" style="height: 25vh; margin-top:0; border-radius:0; width:100%; max-width:100%; background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1513298642013-1813f8b05325?auto=format&fit=crop&w=1920&q=80');">
+    <div class="hero-content">
+      <h2 style="font-size:2.5rem; margin-bottom:5px;">Our Collection</h2>
+      <p style="font-size:1rem; margin-bottom:0;">Discover personalized gifts made with love.</p>
+    </div>
+  </section>
+
+  <!-- Shop Section -->
+  <div class="container shop-layout">
+    
+    <!-- Left Sidebar -->
+    <aside class="shop-sidebar">
+      
+      <div class="filter-card">
+        <h3>Categories</h3>
+        <div class="filter-list" id="category-filters">
+          <!-- Injected via JS or hardcoded below -->
+          <label class="filter-checkbox"><input type="radio" name="category" value="" checked> All Categories</label>
+          <label class="filter-checkbox"><input type="radio" name="category" value="Photo Frames"> Photo Frames</label>
+          <label class="filter-checkbox"><input type="radio" name="category" value="LED Frames"> LED Frames</label>
+          <label class="filter-checkbox"><input type="radio" name="category" value="Couple Gifts"> Couple Gifts</label>
+          <label class="filter-checkbox"><input type="radio" name="category" value="Birthday Gifts"> Birthday Gifts</label>
+          <label class="filter-checkbox"><input type="radio" name="category" value="Anniversary Gifts"> Anniversary Gifts</label>
+          <label class="filter-checkbox"><input type="radio" name="category" value="Personalized Mugs"> Personalized Mugs</label>
+          <label class="filter-checkbox"><input type="radio" name="category" value="Crystal Gifts"> Crystal Gifts</label>
+          <label class="filter-checkbox"><input type="radio" name="category" value="Keychains"> Keychains</label>
+          <label class="filter-checkbox"><input type="radio" name="category" value="Wedding Gifts"> Wedding Gifts</label>
+        </div>
+      </div>
+
+      <div class="filter-card">
+        <h3>Filter by Price</h3>
+        <input type="range" min="0" max="5000" value="5000" class="price-range-slider" id="price-slider">
+        <div class="price-labels">
+          <span>₹0</span>
+          <span id="price-display">₹5000+</span>
+        </div>
+      </div>
+      
+      <!-- Hidden search input mapped from global search for JS logic -->
+      <input type="hidden" id="search-input" value="">
+      
+      <button class="btn-outline" style="width:100%;" onclick="clearFilters()">Clear All Filters</button>
+
+    </aside>
+
+    <!-- Right Main Area -->
+    <main class="shop-main">
+      <div class="shop-topbar">
+        <div id="product-count" style="font-weight:500; color:var(--text-muted);">Showing 0 products</div>
+        <div style="display:flex; align-items:center; gap:10px;">
+          <span style="font-weight:500; font-size:0.9rem;">Sort by:</span>
+          <select id="sort-filter" class="sort-dropdown">
+            <option value="default">Featured</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="newest">Newest Arrivals</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="product-grid" id="all-products-grid">
+        <!-- Products injected via JS -->
+      </div>
+    </main>
+
+  </div>
+
+  <!-- Sticky WhatsApp -->
+  <a href="https://wa.me/917090924592" class="whatsapp-sticky" target="_blank" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3 style="color:var(--secondary-color); font-size:1.8rem;">Sk Studio Gift</h3>
+          <p>Personalized Gifts Made With Love. Your premium destination for customized keepsakes in Nidagundi.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

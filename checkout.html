@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - Sk Studio Gift</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Modern Header -->
+  <header>
+    <div class="container navbar">
+      <div class="nav-left">
+        <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+        <div class="logo">
+          <a href="index.html"><h1>Sk Studio <span>Gift</span></h1></a>
+        </div>
+      </div>
+      
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="products.html">Shop</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Checkout Container -->
+  <div class="container" id="checkout-page-container" style="padding: 60px 0; max-width: 800px;">
+    <div class="customization-section" style="margin-top:0;">
+      <h3>Review & Checkout</h3>
+      
+      <div style="background:var(--bg-body); padding:20px; border-radius:var(--radius-sm); border:1px solid var(--border-color); margin-bottom:25px;">
+        <h4 style="margin-bottom:15px; color:var(--primary-color);">1. Order Summary</h4>
+        <p><strong>Product:</strong> <span id="chk-product"></span></p>
+        <p><strong>Size:</strong> <span id="chk-size"></span></p>
+        <p><strong>Quantity:</strong> <span id="chk-qty"></span></p>
+        <p><strong>Total Price:</strong> <span id="chk-price" style="font-weight:700; color:var(--text-dark);"></span></p>
+      </div>
+
+      <form id="checkout-form" onsubmit="confirmWhatsAppOrder(event)">
+        <h4 style="margin-bottom:15px; color:var(--primary-color);">2. Delivery Details</h4>
+        
+        <div class="form-group" style="margin-bottom:25px;">
+          <label style="font-size:1.1rem; margin-bottom:10px;">Select Delivery Option <span style="color:red">*</span></label>
+          <div style="display:flex; gap:20px;">
+            <label style="cursor:pointer; display:flex; align-items:center; gap:5px;">
+              <input type="radio" name="chk_delivery_option" value="Store Collect" checked onchange="toggleCheckoutDelivery()"> Store Collect (Delivery is Free)
+            </label>
+            <label style="cursor:pointer; display:flex; align-items:center; gap:5px;">
+              <input type="radio" name="chk_delivery_option" value="Home Delivery" onchange="toggleCheckoutDelivery()"> Home Delivery (Charges apply)
+            </label>
+          </div>
+          <div id="chk-home-delivery-info" style="display:none; background:var(--bg-body); padding:10px; border-left:3px solid var(--primary-color); margin-top:10px; font-size:0.85rem; color:var(--text-muted);">
+            Home delivery charge will be taken/updated in WhatsApp. Home delivery takes 5-7 business working days.
+          </div>
+        </div>
+        
+        <h4 style="margin-bottom:15px; color:var(--primary-color);">3. Your Information</h4>
+        <div class="form-group">
+          <input type="text" id="chk-name" class="form-control" placeholder="Full Name" required>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:15px;">
+          <div class="form-group">
+            <input type="tel" id="chk-phone" class="form-control" placeholder="Phone Number" required pattern="[0-9]{10}" title="10 digit phone number">
+          </div>
+          <div class="form-group" id="chk-pincode-group" style="display:none;">
+            <input type="text" id="chk-pincode" class="form-control" placeholder="Pincode" pattern="[0-9]{6}" title="6 digit pincode">
+          </div>
+        </div>
+        <div class="form-group" id="chk-address-group" style="display:none;">
+          <textarea id="chk-address" class="form-control" placeholder="Complete Delivery Address" style="height:80px; resize:vertical;"></textarea>
+        </div>
+
+        <div style="background:rgba(212, 175, 55, 0.1); padding:20px; border-radius:var(--radius-sm); border:1px dashed var(--secondary-color); margin-bottom:25px; margin-top:20px;">
+          <h4 style="margin-bottom:10px; color:var(--text-dark);"><i class="fas fa-exclamation-circle" style="color:var(--secondary-color);"></i> Important Instructions</h4>
+          <p style="margin-bottom:10px; font-size:0.95rem;">You need to send <strong><span id="chk-photo-count"></span></strong> required photo(s) on WhatsApp in <strong>Document Format</strong>.</p>
+          <p style="font-size:0.9rem; color:red; font-weight:600;">Note: Once you send the photos on WhatsApp, they cannot be changed.</p>
+        </div>
+
+        <div style="display:flex; gap:15px;">
+          <button type="button" class="btn-outline" style="flex:0.5; padding:15px;" onclick="window.history.back();">
+            Back
+          </button>
+          <button type="submit" class="btn-whatsapp-order" style="flex:1;">
+            <i class="fab fa-whatsapp" style="font-size:1.3rem;"></i> Confirm & Message
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3 style="color:var(--secondary-color); font-size:1.8rem;">Sk Studio Gift</h3>
+          <p>Personalized Gifts Made With Love. Your premium destination for customized keepsakes in Nidagundi.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

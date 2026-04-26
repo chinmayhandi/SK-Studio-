@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details - Sk Studio Gift</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Modern Header -->
+  <header>
+    <div class="container navbar">
+      <div class="nav-left">
+        <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+        <div class="logo">
+          <a href="index.html"><h1>Sk Studio <span>Gift</span></h1></a>
+        </div>
+      </div>
+      
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="products.html" class="active">Shop</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Product Details Section -->
+  <div class="container product-details-container" id="product-container" style="display: none;">
+    
+    <!-- Left: Gallery -->
+    <div class="product-gallery">
+      <img id="pd-main-img" src="" alt="Product" class="main-image">
+      <div class="thumbnail-grid">
+        <img id="pd-thumb-1" src="" alt="Thumb 1" class="active">
+        <img id="pd-thumb-2" src="" alt="Thumb 2" style="object-position: top left;">
+        <img id="pd-thumb-3" src="" alt="Thumb 3" style="object-position: center;">
+        <img id="pd-thumb-4" src="" alt="Thumb 4" style="object-position: bottom right;">
+      </div>
+    </div>
+
+    <!-- Right: Info & Form -->
+    <div class="product-info-panel">
+      <div style="color:var(--text-muted); font-size:0.9rem; text-transform:uppercase; letter-spacing:1px; margin-bottom:10px;" id="pd-category"></div>
+      <h1 id="pd-title"></h1>
+      
+      <div class="ui-rating">
+        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+        <span>(4.8 / 5 based on 120 reviews)</span>
+      </div>
+      
+      <div class="price-block">
+        <span id="pd-price"></span>
+        <span id="pd-old-price" class="old"></span>
+      </div>
+      
+      <p id="pd-desc" class="desc"></p>
+      
+      <div class="delivery-box">
+        <i class="fas fa-truck"></i>
+        <div>
+          <strong style="display:block;">Standard Delivery: 3-7Business Days</strong>
+          <span style="font-size:0.85rem; color:var(--text-muted);">Secure WhatsApp ordering. Payment instructions provided in chat.</span>
+        </div>
+      </div>
+      
+      <div class="customization-section" id="pd-form-section">
+        <h3>Customize Your Order</h3>
+        <form id="pd-order-form">
+          
+          <div class="form-group" id="pd-size-group" style="display:none;">
+            <label for="pd-size">Select Frame Size <span style="color:red">*</span></label>
+            <select id="pd-size" class="form-control"></select>
+          </div>
+          
+          <div class="form-group">
+            <label for="pd-qty">Quantity</label>
+            <div class="qty-selector">
+              <button type="button" class="qty-btn" onclick="let input = document.getElementById('pd-qty'); if(input.value > 1) input.value--">-</button>
+              <input type="number" id="pd-qty" class="qty-input" value="1" min="1" readonly>
+              <button type="button" class="qty-btn" onclick="document.getElementById('pd-qty').value++">+</button>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <textarea id="pd-msg" class="form-control" placeholder="Any special instructions or custom text for the gift (Optional)" style="height:60px; resize:vertical;"></textarea>
+          </div>
+          
+          <div style="display:flex; gap:15px; margin-top:20px;">
+            <button type="button" class="btn-primary" style="flex:1; padding:15px; font-size:1.1rem; width:100%;" onclick="proceedToCheckout()">
+              Proceed to Checkout
+            </button>
+          </div>
+          
+        </form>
+      </div>
+      
+    </div>
+  </div>
+  
+  <!-- Similar Products Section -->
+  <section class="container" style="padding: 60px 0; border-top: 1px solid var(--border-color); margin-top: 50px;" id="similar-products-section">
+    <div class="section-title" style="margin-top:0;">
+      <h2>Similar Products</h2>
+    </div>
+    <div class="product-grid" id="similar-products-grid">
+      <!-- Similar products injected here -->
+    </div>
+  </section>
+  
+  <div id="product-not-found" style="display:none; text-align:center; padding:100px 0;">
+    <h2>Product Not Found</h2>
+    <p style="margin:20px 0;">The product you are looking for does not exist.</p>
+    <a href="products.html" class="btn-primary">Return to Shop</a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3 style="color:var(--secondary-color); font-size:1.8rem;">Sk Studio Gift</h3>
+          <p>Personalized Gifts Made With Love. Your premium destination for customized keepsakes in Nidagundi.</p>
+        </div>
+        <div class="footer-col">
+          <h3>Shop</h3>
+          <a href="products.html?category=Photo+Frames">Photo Frames</a>
+          <a href="products.html?category=LED+Frames">LED Frames</a>
+        </div>
+        <div class="footer-col">
+          <h3>Company</h3>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+        <div class="footer-col">
+          <h3>Help</h3>
+          <p style="font-weight:bold; color:white;"><i class="fab fa-whatsapp" style="color:#25D366;"></i> Support: +91 7090924592</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
