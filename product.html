@@ -15,7 +15,10 @@
       <div class="nav-left">
         <div class="menu-toggle"><i class="fas fa-bars"></i></div>
         <div class="logo">
-          <a href="index.html"><h1>Sk Studio <span>Gift</span></h1></a>
+          <a href="index.html" style="display:flex; flex-direction:column; line-height:1.2;">
+            <h1 style="font-size: 1.5rem; color: var(--primary-color); font-weight: 700; margin: 0;">SK Studio Gifts</h1>
+            <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 500;">Customized Gifts & Photo Frames</span>
+          </a>
         </div>
       </div>
       
@@ -59,37 +62,105 @@
       <div class="delivery-box">
         <i class="fas fa-truck"></i>
         <div>
-          <strong style="display:block;">Standard Delivery: 3-7Business Days</strong>
+          <strong style="display:block;">Standard Delivery: 5-7 Business Days</strong>
           <span style="font-size:0.85rem; color:var(--text-muted);">Secure WhatsApp ordering. Payment instructions provided in chat.</span>
         </div>
       </div>
-      
-      <div class="customization-section" id="pd-form-section">
+
+      <div class="customize-order-section" id="customize-order-section" style="margin-top: 30px; border: 1px solid var(--border-color); padding: 20px; border-radius: 10px;">
         <h3>Customize Your Order</h3>
-        <form id="pd-order-form">
-          
-          <div class="form-group" id="pd-size-group" style="display:none;">
-            <label for="pd-size">Select Frame Size <span style="color:red">*</span></label>
-            <select id="pd-size" class="form-control"></select>
+        <p class="modal-notice" style="margin-bottom: 20px;">Please choose your frame type first. Each frame type has different sizes and prices.</p>
+        
+        <!-- 1. Select Frame Type -->
+        <div class="modal-section" id="inline-frame-section">
+          <h4>Step 1: Select Frame Type <span class="required">*</span></h4>
+          <div id="inline-frame-options" class="modal-frame-grid">
+            <!-- Frame options injected here -->
+          </div>
+        </div>
+
+        <!-- 2. Preview & Select Size -->
+        <div class="modal-section" id="inline-size-section" style="display:none; border-top:1px solid #eee; padding-top:20px; margin-top:20px;">
+          <div class="selected-frame-feedback">
+            <i class="fas fa-check-circle" style="color: green;"></i> You selected: <strong id="inline-selected-frame-name"></strong>
+          </div>
+          <div class="modal-frame-preview-box">
+            <img id="inline-frame-preview-img" src="" alt="Frame Preview">
           </div>
           
-          <div class="form-group">
-            <label for="pd-qty">Quantity</label>
-            <div class="qty-selector">
-              <button type="button" class="qty-btn" onclick="let input = document.getElementById('pd-qty'); if(input.value > 1) input.value--">-</button>
-              <input type="number" id="pd-qty" class="qty-input" value="1" min="1" readonly>
-              <button type="button" class="qty-btn" onclick="document.getElementById('pd-qty').value++">+</button>
+          <h4 style="margin-top: 20px;">Step 2: Select Frame Size <span class="required">*</span></h4>
+          <div id="inline-size-options" class="modal-size-grid">
+            <!-- Size options injected here -->
+          </div>
+        </div>
+
+        <!-- 3. Selected Order Summary Box -->
+        <div class="modal-summary-box" id="inline-summary-section" style="display:none; margin-top: 20px;">
+          <h4>Step 3: Selected Order Summary</h4>
+          <div class="summary-row">
+            <span>Product Name:</span>
+            <strong id="is-name">-</strong>
+          </div>
+          <div class="summary-row">
+            <span>Frame Type:</span>
+            <strong id="is-frame">-</strong>
+          </div>
+          <div class="summary-row">
+            <span>Size:</span>
+            <strong id="is-size">-</strong>
+          </div>
+          <div class="summary-row">
+            <span>Price:</span>
+            <strong id="is-price">-</strong>
+          </div>
+          
+          <div class="summary-row" style="align-items: center; margin-top: 10px;">
+            <span>Quantity:</span>
+            <div class="modal-qty-selector">
+              <button type="button" onclick="updateInlineQty(-1)">-</button>
+              <input type="number" id="inline-qty" value="1" min="1" readonly>
+              <button type="button" onclick="updateInlineQty(1)">+</button>
             </div>
           </div>
           
-          <!-- Message box moved to checkout.html -->
-          <div style="display:flex; gap:15px; margin-top:20px;">
-            <button type="button" class="btn-primary" style="flex:1; padding:15px; font-size:1.1rem; width:100%;" onclick="proceedToCheckout()">
-              Proceed to Checkout
-            </button>
-          </div>
+          <hr class="summary-divider">
           
-        </form>
+          <div class="summary-row total-row">
+            <span>Total Amount:</span>
+            <strong id="is-total">₹0</strong>
+          </div>
+        </div>
+
+        <!-- Inline Error Message -->
+        <div id="inline-error-message" style="display:none; color: #d9534f; background: #fdf7f7; padding: 10px; border-radius: 5px; margin-top: 15px; font-weight: bold; border: 1px solid #d9534f;">
+          <i class="fas fa-exclamation-circle"></i> Please select frame type and size before checkout.
+        </div>
+
+        <!-- Proceed Button -->
+        <div style="margin-top: 20px;">
+          <button id="btn-proceed-checkout" class="btn-primary" style="width: 100%; padding: 18px; font-size: 1.2rem; border-radius: 30px; display: flex; align-items: center; justify-content: center; gap: 10px;" onclick="proceedFromInline()">
+            <i class="fas fa-shopping-bag"></i> Proceed to Checkout
+          </button>
+        </div>
+      </div>
+      
+      <!-- Unique Rich Product Description (Moved here) -->
+      <div id="rich-product-description" class="rich-product-desc" style="display:none; margin-top: 40px; font-size: 1.05rem; line-height: 1.6; color: var(--text-color);"></div>
+      
+      <!-- Why Choose Us -->
+      <div class="why-choose-us" style="margin-top: 40px; padding-top: 30px; border-top: 1px solid var(--border-color);">
+        <h3 style="font-size: 1.3rem; margin-bottom: 20px;">Why Choose SK Studio Gifts?</h3>
+        <ul style="list-style: none; padding: 0;">
+          <li style="margin-bottom: 15px; display: flex; gap: 15px;"><i class="fas fa-medal" style="color: var(--secondary-color); font-size: 1.5rem;"></i> <div><strong>Premium Quality</strong><p style="font-size: 0.9rem; color: var(--text-muted); margin:0;">We use high-grade materials for lasting memories.</p></div></li>
+          <li style="margin-bottom: 15px; display: flex; gap: 15px;"><i class="fas fa-paint-brush" style="color: var(--secondary-color); font-size: 1.5rem;"></i> <div><strong>100% Customization</strong><p style="font-size: 0.9rem; color: var(--text-muted); margin:0;">Personalized completely to your exact taste.</p></div></li>
+          <li style="margin-bottom: 15px; display: flex; gap: 15px;"><i class="fas fa-truck-fast" style="color: var(--secondary-color); font-size: 1.5rem;"></i> <div><strong>Safe & Fast Delivery</strong><p style="font-size: 0.9rem; color: var(--text-muted); margin:0;">Carefully packaged to reach you in perfect condition.</p></div></li>
+        </ul>
+      </div>
+
+      <!-- Customer Note -->
+      <div class="customer-note" style="margin-top: 30px; padding: 20px; background: rgba(128,0,0,0.05); border-left: 4px solid var(--primary-color); border-radius: var(--radius-sm);">
+        <h4 style="margin-bottom: 10px; color: var(--primary-color);">📝 Note to Customers</h4>
+        <p style="font-size: 0.9rem; color: var(--text-dark); margin:0;">After completing your order, please be ready to send your high-quality photos via WhatsApp (in Document Format) to ensure the best printing results. Our admin will guide you through the process.</p>
       </div>
       
     </div>
@@ -122,7 +193,8 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-          <h3 style="color:var(--secondary-color); font-size:1.8rem;">Sk Studio Gift</h3>
+          <h3 style="color:var(--secondary-color); font-size:1.5rem; margin-bottom: 5px;">SK Studio Gifts</h3>
+          <p style="font-size: 0.85rem; color: #ccc; margin-bottom: 15px; margin-top: 0;">Customized Gifts & Photo Frames</p>
           <p>Personalized Gifts Made With Love. Your premium destination for customized keepsakes in Nidagundi.</p>
           <div class="footer-socials">
             <a href="https://www.instagram.com/sk_studio_gifts01?igsh=MThpdHVxa2ZpZGdzNQ%3D%3D" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -160,5 +232,8 @@
 
   <script src="js/products.js"></script>
   <script src="js/script.js"></script>
+
+
+
 </body>
 </html>

@@ -1410,3 +1410,287 @@ footer {
   .shop-photos-grid { grid-template-columns: 1fr; grid-template-areas: "main" "sub1" "sub2"; }
   .shop-photo-card.main-photo { height: 250px; }
 }
+
+.frame-option { border: 2px solid var(--border-color); border-radius: var(--radius-sm); padding: 10px; cursor: pointer; text-align: center; transition: all 0.3s ease; } 
+.frame-option:hover { border-color: var(--primary-color); } 
+.frame-option.selected { border-color: var(--primary-color); background: rgba(212, 175, 55, 0.1); box-shadow: 0 0 10px rgba(212, 175, 55, 0.3); } 
+.frame-option img { width: 100%; height: 80px; object-fit: cover; border-radius: 4px; margin-bottom: 8px; } 
+.frame-option span { font-weight: 600; font-size: 0.9rem; }
+
+.size-option { border: 1px solid #ddd; border-radius: 4px; padding: 12px 10px; cursor: pointer; text-align: center; font-size: 0.95rem; font-weight: 600; transition: all 0.2s ease; background: white; } 
+.size-option:hover { border-color: #800000; } 
+.size-option.selected { border-color: #800000; color: #800000; background: #fffcfc; }
+
+/* Order Customization Modal Styles */
+.order-modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(5px);
+  z-index: 999999;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.order-modal-overlay.show {
+  display: flex;
+  animation: fadeIn 0.3s ease;
+}
+.order-modal-content {
+  background: #fff;
+  border-radius: var(--radius-md);
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+  overflow: hidden;
+  animation: slideUp 0.3s ease;
+}
+.order-modal-header {
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fcfcfc;
+}
+.order-modal-header h2 {
+  font-size: 1.3rem;
+  margin: 0;
+  color: var(--text-dark);
+}
+.order-modal-close {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--text-muted);
+}
+.order-modal-body {
+  padding: 20px;
+  overflow-y: auto;
+  flex: 1;
+}
+.modal-product-header {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.modal-product-header img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+.modal-product-info h3 {
+  margin: 0 0 5px 0;
+  font-size: 1.2rem;
+}
+.modal-instruction {
+  font-size: 0.85rem;
+  color: var(--primary-color);
+  font-weight: 500;
+  margin: 0;
+}
+.modal-notice {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  background: #fff9e6;
+  padding: 10px;
+  border-radius: 4px;
+  border-left: 3px solid #ffc107;
+  margin-bottom: 20px;
+}
+.modal-frame-grid, .modal-size-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 15px;
+}
+.modal-frame-option {
+  border: 2px solid #eee;
+  border-radius: 8px;
+  padding: 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.modal-frame-option:hover, .modal-frame-option.selected {
+  border-color: var(--primary-color);
+}
+.modal-frame-option.selected {
+  background: #fffcfc;
+  box-shadow: 0 0 10px rgba(128, 0, 0, 0.1);
+}
+.modal-frame-option img {
+  width: 100%;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 5px;
+}
+.modal-frame-option span {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.modal-frame-option small {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+.selected-frame-feedback {
+  background: #e8f5e9;
+  color: #2e7d32;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+}
+.modal-frame-preview-box img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  background: #f9f9f9;
+}
+.modal-size-option {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+.modal-size-option:hover, .modal-size-option.selected {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  background: #fffcfc;
+}
+.modal-summary-box {
+  background: #fcfcfc;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 15px;
+  margin-top: 20px;
+}
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+.summary-row span {
+  color: var(--text-muted);
+}
+.summary-divider {
+  border: none;
+  border-top: 1px dashed #ccc;
+  margin: 15px 0;
+}
+.total-row {
+  font-size: 1.1rem;
+}
+.total-row strong {
+  color: var(--primary-color);
+}
+.modal-qty-selector {
+  display: flex;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.modal-qty-selector button {
+  background: #f9f9f9;
+  border: none;
+  padding: 5px 12px;
+  cursor: pointer;
+}
+.modal-qty-selector input {
+  width: 40px;
+  border: none;
+  text-align: center;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+.order-modal-footer {
+  padding: 20px;
+  border-top: 1px solid #eee;
+  display: flex;
+  gap: 15px;
+  background: #fff;
+}
+.order-modal-footer button {
+  flex: 1;
+  padding: 12px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.required {
+  color: red;
+}
+
+@media (max-width: 600px) {
+  .modal-frame-grid, .modal-size-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+
+/* --- Additional Mobile Responsive Fixes --- */
+@media (max-width: 768px) {
+  /* Fix Product Image Size */
+  .main-image {
+    height: auto !important;
+    max-height: 400px !important;
+    object-fit: contain !important;
+  }
+  
+  /* Prevent Text Overflow */
+  body {
+    word-break: break-word;
+    overflow-x: hidden;
+  }
+  
+  /* Make all inputs full width on mobile */
+  .form-control {
+    width: 100%;
+  }
+
+  /* Adjust Navbar for Logo */
+  .logo h1 {
+    font-size: 1.2rem !important;
+  }
+  .logo span {
+    font-size: 0.65rem !important;
+  }
+}
+
+@media (max-width: 400px) {
+  /* Frame types and sizes drop to 1 column on very small screens */
+  .modal-frame-grid, .modal-size-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .features-grid .feature-card {
+    padding: 20px 15px;
+  }
+}
+
+/* Ensure buttons text wrap nicely if too long */
+.btn-primary, .btn-whatsapp-order {
+  white-space: normal;
+  text-align: center;
+}

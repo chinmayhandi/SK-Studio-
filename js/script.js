@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  
+
   // 1. Mobile Menu Toggle
   const menuToggle = document.querySelector('.menu-toggle');
   const navLinks = document.querySelector('.nav-links');
@@ -31,37 +31,37 @@ document.addEventListener('DOMContentLoaded', () => {
   // 5. Render All Products & Setup Filters (products.html)
   const allProductsContainer = document.getElementById('all-products-grid');
   if (allProductsContainer && typeof products !== 'undefined') {
-    
+
     // Check URL params for category or search
     const urlParams = new URLSearchParams(window.location.search);
     const categoryParam = urlParams.get('category');
     const searchParam = urlParams.get('search');
-    
+
     if (categoryParam) {
       const radios = document.getElementsByName('category');
       for (let r of radios) {
         if (r.value === categoryParam) r.checked = true;
       }
     }
-    
+
     if (searchParam) {
       const searchInput = document.getElementById('search-input');
       const globalSearch = document.getElementById('global-search');
-      if(searchInput) searchInput.value = searchParam;
-      if(globalSearch) globalSearch.value = searchParam;
+      if (searchInput) searchInput.value = searchParam;
+      if (globalSearch) globalSearch.value = searchParam;
     }
-    
+
     filterAndRenderProducts(); // Initial render
-    
+
     // Event Listeners for Filters
     const radios = document.getElementsByName('category');
     for (let r of radios) {
       r.addEventListener('change', filterAndRenderProducts);
     }
-    
+
     const sortFilter = document.getElementById('sort-filter');
     if (sortFilter) sortFilter.addEventListener('change', filterAndRenderProducts);
-    
+
     const priceSlider = document.getElementById('price-slider');
     const priceDisplay = document.getElementById('price-display');
     if (priceSlider) {
@@ -77,12 +77,12 @@ document.addEventListener('DOMContentLoaded', () => {
   if (productContainer && typeof products !== 'undefined') {
     const urlParams = new URLSearchParams(window.location.search);
     const productId = parseInt(urlParams.get('id'));
-    
+
     const product = products.find(p => p.id === productId);
-    
+
     if (product) {
       productContainer.style.display = 'grid'; // Show container
-      
+
       // Populate Details
       document.getElementById('pd-title').textContent = product.name;
       document.getElementById('pd-category').textContent = product.category;
@@ -92,59 +92,67 @@ document.addEventListener('DOMContentLoaded', () => {
       const mainImg = document.getElementById('pd-main-img');
       mainImg.src = product.image;
       mainImg.style.cursor = 'zoom-in';
-      mainImg.onclick = function() {
+      mainImg.onclick = function () {
         const modalImg = document.getElementById('modal-img');
         const modal = document.getElementById('image-modal');
-        if(modalImg && modal) {
+        if (modalImg && modal) {
           modalImg.src = this.src;
           modal.style.display = 'flex';
           document.body.style.overflow = 'hidden';
         }
       };
-      
+
       document.getElementById('pd-thumb-1').src = product.image;
-      
+
       const thumb2 = document.getElementById('pd-thumb-2');
       const thumb3 = document.getElementById('pd-thumb-3');
       const thumb4 = document.getElementById('pd-thumb-4');
-      
+
       if (thumb2) thumb2.src = product.image;
       if (thumb3) thumb3.src = product.image;
       if (thumb4) thumb4.src = product.image;
-      
-      // Setup Size Logic & Price
-      let basePrice = product.price;
-      const sizeGroup = document.getElementById('pd-size-group');
-      const sizeSelect = document.getElementById('pd-size');
-      const isFrame = product.name.toLowerCase().includes('frame') || product.category.toLowerCase().includes('frame');
-      if (isFrame && product.sizes && product.sizes.length > 0) {
-        sizeGroup.style.display = 'block';
-        sizeSelect.required = true;
-        sizeSelect.innerHTML = '<option value="">Select Size</option>';
-        product.sizes.forEach((sizeObj) => {
-          const sizeName = sizeObj.size;
-          const sizePrice = sizeObj.price;
-          sizeSelect.innerHTML += `<option value="${sizeName}" data-price="${sizePrice}">${sizeName} (₹${sizePrice})</option>`;
-        });
+
+      // Populate Rich Description if available
+      const richDescContainer = document.getElementById('rich-product-description');
+      if (richDescContainer && product.descriptionTitle) {
+        let html = `<h2 style="margin-bottom: 15px; font-size: 1.5rem; color: var(--primary-color);">${product.descriptionTitle}</h2>`;
         
-        // Add event listener to update displayed price
-        sizeSelect.addEventListener('change', function() {
-          this.classList.remove('border-error'); // Remove red border when fixed
-          const selectedOption = this.options[this.selectedIndex];
-          if (selectedOption.value) {
-            document.getElementById('pd-price').textContent = `₹${selectedOption.getAttribute('data-price')}`;
-          } else {
-            document.getElementById('pd-price').textContent = `₹${basePrice}`;
-          }
-        });
-      } else {
-        sizeGroup.style.display = 'none';
-        sizeSelect.required = false;
-        sizeSelect.innerHTML = '<option value="Size not required">Size not required</option>';
+        if (product.descriptionText) {
+          const paragraphs = product.descriptionText.split('\n\n');
+          paragraphs.forEach(p => {
+            if(p.trim()) html += `<p style="margin-bottom: 15px;">${p.trim()}</p>`;
+          });
+        }
+
+        if (product.customFeatures && product.customFeatures.length > 0) {
+          html += `<p style="font-weight: 600; margin-bottom: 10px;">You can add:</p>`;
+          html += `<ul style="list-style-type: none; padding-left: 0; margin-bottom: 20px;">`;
+          product.customFeatures.forEach(feature => {
+            html += `<li style="margin-bottom: 8px;"><i class="fas fa-check" style="color: var(--secondary-color); margin-right: 8px;"></i>${feature}</li>`;
+          });
+          html += `</ul>`;
+        }
+        
+        if (product.perfectFor && product.perfectFor.length > 0) {
+          html += `<h3 style="font-size: 1.2rem; margin-bottom: 10px;">🎁 Perfect For:</h3>`;
+          html += `<ul style="list-style-type: none; padding-left: 0; margin-bottom: 20px;">`;
+          product.perfectFor.forEach(occasion => {
+            html += `<li style="margin-bottom: 8px;">- ${occasion}</li>`;
+          });
+          html += `</ul>`;
+        }
+
+        richDescContainer.innerHTML = html;
+        richDescContainer.style.display = 'block';
       }
-      
+
+      // Initialize Inline Order Flow
+      if (typeof initInlineOrderFlow === 'function') {
+        initInlineOrderFlow(product);
+      }
+
       // Form Submit (handled manually now via button click)
-      
+
       // Render Similar Products
       const similarContainer = document.getElementById('similar-products-grid');
       if (similarContainer) {
@@ -157,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         renderProducts(similarProducts, similarContainer);
       }
-      
+
     } else {
       document.getElementById('product-not-found').style.display = 'block';
     }
@@ -172,10 +180,19 @@ document.addEventListener('DOMContentLoaded', () => {
       window.location.href = 'products.html';
       return;
     }
-    
+
     const data = JSON.parse(pendingOrderStr);
-    
+
     document.getElementById('chk-product').textContent = data.productName;
+    const frameTypeEl = document.getElementById('chk-frame-type');
+    if (frameTypeEl) {
+      if (data.frameType && data.frameType !== 'N/A') {
+        frameTypeEl.textContent = data.frameType;
+        frameTypeEl.parentElement.style.display = 'block';
+      } else {
+        frameTypeEl.parentElement.style.display = 'none';
+      }
+    }
     document.getElementById('chk-size').textContent = data.size;
     document.getElementById('chk-qty').textContent = data.qty;
     document.getElementById('chk-price').textContent = `₹${data.price * data.qty}`;
@@ -193,20 +210,20 @@ document.addEventListener('DOMContentLoaded', () => {
     // Modal Logic
     const instructionsModal = document.getElementById('checkout-instructions-modal');
     const understandBtn = document.getElementById('btn-understand-instructions');
-    
+
     if (instructionsModal && understandBtn) {
       // Show modal on load
       setTimeout(() => {
         instructionsModal.classList.add('show');
         document.body.style.overflow = 'hidden'; // Prevent scrolling
-        
+
         // Play Success Sound
         playAudioAlert('success');
-        
+
         // Soft tactile notification
         if (navigator.vibrate) navigator.vibrate([50, 50, 50]);
       }, 100);
-      
+
       // Close modal on button click
       understandBtn.addEventListener('click', () => {
         instructionsModal.classList.remove('show');
@@ -280,36 +297,36 @@ function playAudioAlert(type) {
     if (audioCtx.state === 'suspended') {
       audioCtx.resume();
     }
-    
+
     const oscillator = audioCtx.createOscillator();
     const gainNode = audioCtx.createGain();
-    
+
     oscillator.connect(gainNode);
     gainNode.connect(audioCtx.destination);
-    
+
     if (type === 'error') {
       // Soft double beep
       oscillator.type = 'sine';
       oscillator.frequency.setValueAtTime(300, audioCtx.currentTime);
       oscillator.frequency.exponentialRampToValueAtTime(150, audioCtx.currentTime + 0.1);
-      
+
       gainNode.gain.setValueAtTime(0, audioCtx.currentTime);
       gainNode.gain.linearRampToValueAtTime(0.3, audioCtx.currentTime + 0.05);
       gainNode.gain.linearRampToValueAtTime(0.01, audioCtx.currentTime + 0.1);
-      
+
       const osc2 = audioCtx.createOscillator();
       const gain2 = audioCtx.createGain();
       osc2.type = 'sine';
       osc2.frequency.setValueAtTime(300, audioCtx.currentTime + 0.15);
       osc2.frequency.exponentialRampToValueAtTime(150, audioCtx.currentTime + 0.25);
-      
+
       gain2.gain.setValueAtTime(0, audioCtx.currentTime + 0.15);
       gain2.gain.linearRampToValueAtTime(0.3, audioCtx.currentTime + 0.2);
       gain2.gain.linearRampToValueAtTime(0.01, audioCtx.currentTime + 0.25);
-      
+
       osc2.connect(gain2);
       gain2.connect(audioCtx.destination);
-      
+
       oscillator.start(audioCtx.currentTime);
       oscillator.stop(audioCtx.currentTime + 0.1);
       osc2.start(audioCtx.currentTime + 0.15);
@@ -319,11 +336,11 @@ function playAudioAlert(type) {
       oscillator.type = 'sine';
       oscillator.frequency.setValueAtTime(523.25, audioCtx.currentTime); // C5
       oscillator.frequency.setValueAtTime(659.25, audioCtx.currentTime + 0.1); // E5
-      
+
       gainNode.gain.setValueAtTime(0, audioCtx.currentTime);
       gainNode.gain.linearRampToValueAtTime(0.15, audioCtx.currentTime + 0.05);
       gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.6);
-      
+
       oscillator.start(audioCtx.currentTime);
       oscillator.stop(audioCtx.currentTime + 0.6);
     }
@@ -334,16 +351,16 @@ function playAudioAlert(type) {
 
 function renderProducts(productList, container) {
   container.innerHTML = '';
-  
+
   // Update count if on shop page
   const countEl = document.getElementById('product-count');
   if (countEl) countEl.textContent = `Showing ${productList.length} products`;
-  
+
   if (productList.length === 0) {
     container.innerHTML = '<p style="grid-column: 1/-1; text-align: center; padding: 50px; font-size:1.1rem; color:var(--text-muted);">No products found matching your criteria.</p>';
     return;
   }
-  
+
   productList.forEach(product => {
     const card = document.createElement('a');
     card.href = `product.html?id=${product.id}`; // Link to dedicated page
@@ -351,7 +368,6 @@ function renderProducts(productList, container) {
     card.innerHTML = `
       <div class="product-image-container">
         ${product.isNewArrival ? '<span class="badge">New Arrival</span>' : ''}
-        <div class="wishlist-btn-overlay" onclick="event.preventDefault(); this.style.color='red';"><i class="fas fa-heart"></i></div>
         <img src="${product.image}" alt="${product.name}">
       </div>
       <div class="product-info">
@@ -359,7 +375,7 @@ function renderProducts(productList, container) {
         <h3 class="product-name">${product.name}</h3>
 
         <div class="product-price-wrapper">
-          <span class="price">₹${product.price}</span>
+          <span class="price">${product.priceRange ? product.priceRange : '₹' + product.price}</span>
           ${product.oldPrice ? `<span class="old-price">₹${product.oldPrice}</span>` : ''}
         </div>
       </div>
@@ -371,25 +387,25 @@ function renderProducts(productList, container) {
 function filterAndRenderProducts() {
   const allProductsContainer = document.getElementById('all-products-grid');
   if (!allProductsContainer) return;
-  
+
   // Get Category Radio
   let categoryFilter = '';
   const radios = document.getElementsByName('category');
   for (let r of radios) {
     if (r.checked) categoryFilter = r.value;
   }
-  
+
   const sortFilter = document.getElementById('sort-filter').value;
   const searchInput = document.getElementById('search-input').value.toLowerCase();
   const maxPrice = parseInt(document.getElementById('price-slider').value);
-  
+
   let filteredProducts = products.filter(product => {
     const matchCategory = categoryFilter ? product.category === categoryFilter : true;
     const matchSearch = product.name.toLowerCase().includes(searchInput);
     const matchPrice = product.price <= maxPrice;
     return matchCategory && matchSearch && matchPrice;
   });
-  
+
   if (sortFilter === 'price-low') {
     filteredProducts.sort((a, b) => a.price - b.price);
   } else if (sortFilter === 'price-high') {
@@ -397,7 +413,7 @@ function filterAndRenderProducts() {
   } else if (sortFilter === 'newest') {
     filteredProducts.sort((a, b) => (b.isNewArrival === a.isNewArrival) ? 0 : b.isNewArrival ? 1 : -1);
   }
-  
+
   renderProducts(filteredProducts, allProductsContainer);
 }
 
@@ -414,10 +430,10 @@ function clearFilters() {
   // Reset Search
   document.getElementById('search-input').value = '';
   const globalSearch = document.getElementById('global-search');
-  if(globalSearch) globalSearch.value = '';
+  if (globalSearch) globalSearch.value = '';
   // Reset Sort
   document.getElementById('sort-filter').value = 'default';
-  
+
   filterAndRenderProducts();
 }
 
@@ -428,137 +444,256 @@ function toggleCheckoutDelivery() {
   const homeDeliveryInfo = document.getElementById('chk-home-delivery-info');
   const pincodeInput = document.getElementById('chk-pincode');
   const addressInput = document.getElementById('chk-address');
-  
+  const collectionDateGroup = document.getElementById('chk-collection-date-group');
+  const collectionDateInput = document.getElementById('chk-collection-date');
+
   if (deliveryOption === 'Home Delivery') {
     pincodeGroup.style.display = 'block';
     addressGroup.style.display = 'block';
     homeDeliveryInfo.style.display = 'block';
     pincodeInput.required = true;
     addressInput.required = true;
+    
+    if (collectionDateGroup) collectionDateGroup.style.display = 'none';
+    if (collectionDateInput) collectionDateInput.required = false;
   } else {
     pincodeGroup.style.display = 'none';
     addressGroup.style.display = 'none';
     homeDeliveryInfo.style.display = 'none';
     pincodeInput.required = false;
     addressInput.required = false;
+    
+    if (collectionDateGroup) collectionDateGroup.style.display = 'block';
+    if (collectionDateInput) collectionDateInput.required = true;
   }
 }
 
-let currentOrderData = null;
+// --- INLINE ORDER CUSTOMIZATION LOGIC ---
+let inlineProduct = null;
+let inlineSelectedFrame = null;
+let inlineSelectedSize = null;
+let inlineSelectedPrice = 0;
 
-function proceedToCheckout() {
-  // Validate Size if required
-  const sizeSelect = document.getElementById('pd-size');
-  if (sizeSelect.required && !sizeSelect.value) {
-    // 1. Play Error Sound
-    playAudioAlert('error');
-    
-    // 2. Mobile Vibration
-    if (navigator.vibrate) navigator.vibrate([100]);
-    
-    // 3. Add CSS classes for shake and red border
-    sizeSelect.classList.add('shake-error', 'border-error');
-    setTimeout(() => sizeSelect.classList.remove('shake-error'), 500); // Remove shake but keep red border
-    
-    // 4. Show Custom Popup
-    let existingPopup = document.getElementById('size-warning-popup');
-    if (!existingPopup) {
-      existingPopup = document.createElement('div');
-      existingPopup.id = 'size-warning-popup';
-      existingPopup.className = 'size-warning-popup';
-      existingPopup.innerHTML = '<i class="fas fa-exclamation-circle"></i> Please select a size before continuing';
-      document.body.appendChild(existingPopup);
+function initInlineOrderFlow(product) {
+  inlineProduct = product;
+  inlineSelectedFrame = null;
+  inlineSelectedSize = null;
+  inlineSelectedPrice = product.price;
+
+  const customizeSection = document.getElementById('customize-order-section');
+  if (!customizeSection) return;
+
+  // Reset Quantities
+  document.getElementById('inline-qty').value = 1;
+
+  // Initial Hide
+  document.getElementById('inline-size-section').style.display = 'none';
+  document.getElementById('inline-summary-section').style.display = 'none';
+  document.getElementById('inline-error-message').style.display = 'none';
+  document.getElementById('is-name').textContent = product.name;
+
+  // Populate Frames
+  const frameGrid = document.getElementById('inline-frame-options');
+  frameGrid.innerHTML = '';
+
+  if (product.frameTypes && Object.keys(product.frameTypes).length > 0) {
+    document.getElementById('inline-frame-section').style.display = 'block';
+
+    Object.keys(product.frameTypes).forEach(frameName => {
+      const frameData = product.frameTypes[frameName];
+      const startingPrice = Object.values(frameData.prices)[0] || product.price; // Get first size price
+
+      const card = document.createElement('div');
+      card.className = 'modal-frame-option'; // Reusing the same class for styling
+      card.innerHTML = `
+        <img src="${frameData.image || product.image}" alt="${frameName}" onerror="this.src='${product.image}'">
+        <span>${frameName}</span>
+        <small>Starts from ₹${startingPrice}</small>
+      `;
+
+      card.addEventListener('click', function () {
+        // Clear Error Message
+        document.getElementById('inline-error-message').style.display = 'none';
+
+        // Handle UI Selection
+        document.querySelectorAll('#inline-frame-options .modal-frame-option').forEach(el => el.classList.remove('selected'));
+        this.classList.add('selected');
+
+        // Update State
+        inlineSelectedFrame = frameName;
+        inlineSelectedSize = null;
+        inlineSelectedPrice = startingPrice;
+
+        // Show next section
+        document.getElementById('inline-size-section').style.display = 'block';
+        document.getElementById('inline-selected-frame-name').textContent = frameName;
+        document.getElementById('inline-frame-preview-img').src = frameData.image || product.image;
+
+        // Reset summary until size is selected
+        document.getElementById('inline-summary-section').style.display = 'none';
+
+        // Populate Sizes
+        const sizeGrid = document.getElementById('inline-size-options');
+        sizeGrid.innerHTML = '';
+
+        for (let size in frameData.prices) {
+          const price = frameData.prices[size];
+          const sizeBtn = document.createElement('div');
+          sizeBtn.className = 'modal-size-option'; // Reusing class
+          sizeBtn.textContent = size;
+
+          sizeBtn.addEventListener('click', function () {
+            // Clear Error Message
+            document.getElementById('inline-error-message').style.display = 'none';
+
+            document.querySelectorAll('#inline-size-options .modal-size-option').forEach(el => el.classList.remove('selected'));
+            this.classList.add('selected');
+
+            inlineSelectedSize = size;
+            inlineSelectedPrice = price;
+
+            // Show and Update Summary
+            document.getElementById('inline-summary-section').style.display = 'block';
+            document.getElementById('is-frame').textContent = inlineSelectedFrame;
+            document.getElementById('is-size').textContent = inlineSelectedSize;
+            document.getElementById('is-price').textContent = `₹${inlineSelectedPrice}`;
+            updateInlineSummaryTotal();
+          });
+
+          sizeGrid.appendChild(sizeBtn);
+        }
+      });
+
+      frameGrid.appendChild(card);
+    });
+  } else {
+    // Product without frames fallback
+    document.getElementById('inline-frame-section').style.display = 'none';
+    inlineSelectedFrame = 'N/A';
+    inlineSelectedSize = 'N/A';
+    document.getElementById('inline-summary-section').style.display = 'block';
+    document.getElementById('is-frame').textContent = 'N/A';
+    document.getElementById('is-size').textContent = 'N/A';
+    document.getElementById('is-price').textContent = `₹${inlineSelectedPrice}`;
+    updateInlineSummaryTotal();
+  }
+}
+
+window.updateInlineQty = function (change) {
+  const input = document.getElementById('inline-qty');
+  let val = parseInt(input.value) + change;
+  if (val < 1) val = 1;
+  input.value = val;
+  updateInlineSummaryTotal();
+};
+
+function updateInlineSummaryTotal() {
+  const qty = parseInt(document.getElementById('inline-qty').value) || 1;
+  const total = inlineSelectedPrice * qty;
+  document.getElementById('is-total').textContent = `₹${total}`;
+}
+
+window.proceedFromInline = function () {
+  const errorMsg = document.getElementById('inline-error-message');
+  if (inlineProduct.frameTypes && Object.keys(inlineProduct.frameTypes).length > 0) {
+    if (!inlineSelectedFrame || !inlineSelectedSize) {
+      errorMsg.style.display = 'block';
+      if (navigator.vibrate) navigator.vibrate([50, 50, 50]);
+      return;
     }
-    
-    // Trigger reflow for animation
-    void existingPopup.offsetWidth;
-    existingPopup.classList.add('show');
-    
-    // Hide popup after 3 seconds
-    setTimeout(() => existingPopup.classList.remove('show'), 3000);
-    
-    return;
   }
 
-  // Get Product Info
-  const urlParams = new URLSearchParams(window.location.search);
-  const productId = parseInt(urlParams.get('id'));
-  const product = products.find(p => p.id === productId);
-  if (!product) return;
-  
-  const size = sizeSelect.value || 'Size not required';
-  
-  let finalPrice = product.price;
-  if (sizeSelect.options.length > 0 && sizeSelect.selectedIndex > -1) {
-    const selectedPrice = sizeSelect.options[sizeSelect.selectedIndex].getAttribute('data-price');
-    if (selectedPrice) finalPrice = selectedPrice;
-  }
-  
-  const qty = document.getElementById('pd-qty').value;
+  errorMsg.style.display = 'none';
 
-  // Save data to session storage
+  const qty = parseInt(document.getElementById('inline-qty').value) || 1;
+
   const orderData = {
-    productName: product.name,
-    category: product.category,
-    price: finalPrice,
-    size: size,
+    productName: inlineProduct.name,
+    category: inlineProduct.category,
+    frameType: inlineSelectedFrame || 'N/A',
+    price: inlineSelectedPrice,
+    size: inlineSelectedSize || 'N/A',
     qty: qty,
-    photoCount: product.photoCount
+    photoCount: inlineProduct.photoCount
   };
-  
-  sessionStorage.setItem('pendingOrder', JSON.stringify(orderData));
 
-  // Redirect to checkout page
+  sessionStorage.setItem('pendingOrder', JSON.stringify(orderData));
   window.location.href = 'checkout.html';
+};
+
+function showModalAlert(msg) {
+  playAudioAlert('error');
+  if (navigator.vibrate) navigator.vibrate([100]);
+
+  let existingPopup = document.getElementById('size-warning-popup');
+  if (!existingPopup) {
+    existingPopup = document.createElement('div');
+    existingPopup.id = 'size-warning-popup';
+    existingPopup.className = 'size-warning-popup';
+    document.body.appendChild(existingPopup);
+  }
+  existingPopup.innerHTML = `<i class="fas fa-exclamation-circle"></i> ${msg}`;
+
+  // Ensure popup is above modal
+  existingPopup.style.zIndex = '9999999';
+
+  void existingPopup.offsetWidth;
+  existingPopup.classList.add('show');
+  setTimeout(() => existingPopup.classList.remove('show'), 3000);
 }
 
 function confirmWhatsAppOrder(e) {
   e.preventDefault();
-  
+
   const pendingOrderStr = sessionStorage.getItem('pendingOrder');
   if (!pendingOrderStr) return;
   const data = JSON.parse(pendingOrderStr);
-  
+
   const deliveryOption = document.querySelector('input[name="chk_delivery_option"]:checked').value;
   const name = document.getElementById('chk-name').value;
   const phone = document.getElementById('chk-phone').value;
   const pincode = document.getElementById('chk-pincode').value;
   const address = document.getElementById('chk-address').value;
   const instructions = document.getElementById('chk-instructions').value;
+  const collectionDateInput = document.getElementById('chk-collection-date');
+  const collectionDate = collectionDateInput ? collectionDateInput.value : '';
 
-  // Construct WhatsApp Message
+  // Construct WhatsApp Message exactly as requested
   let waMessage = `Hello Sk Studio Gift,\n\n`;
   waMessage += `I want to order a customized gift.\n\n`;
   waMessage += `Product Name: ${data.productName}\n`;
+  if (data.frameType && data.frameType !== 'N/A') {
+    waMessage += `Frame Type: ${data.frameType}\n`;
+  }
   waMessage += `Category: ${data.category}\n`;
-  waMessage += `Price: ₹${data.price * data.qty}\n`;
+  waMessage += `Price: ₹${data.price}\n`;
   waMessage += `Selected Size: ${data.size}\n`;
   waMessage += `Quantity: ${data.qty}\n`;
   waMessage += `Required Photos: ${data.photoCount} (Sending soon in Document Format)\n\n`;
-  
-  if (instructions) {
-    waMessage += `Special Instructions: ${instructions}\n\n`;
-  }
-  
+
   waMessage += `Delivery Option: ${deliveryOption}\n`;
+  if (deliveryOption === 'Store Collect' && collectionDate) {
+    waMessage += `Collection Date: ${collectionDate}\n`;
+  }
   waMessage += `Customer Name: ${name}\n`;
   waMessage += `Phone Number: ${phone}\n`;
   
   if (deliveryOption === 'Home Delivery') {
-    waMessage += `Pincode: ${pincode}\n`;
     waMessage += `Address: ${address}\n`;
+    waMessage += `Pincode: ${pincode}\n\n`;
+  } else {
+    waMessage += `\n`;
   }
-  waMessage += `\n`;
-  
-  if (data.msg) {
-    waMessage += `Special Message:\n${data.msg}\n\n`;
+
+  if (instructions) {
+    waMessage += `Special Instructions: ${instructions}\n\n`;
   }
-  
+
   waMessage += `Note: I will send ${data.photoCount} photos in Document Format right here to complete the order.`;
-  
+
   // Clear the session storage
   sessionStorage.removeItem('pendingOrder');
-  
+
   // Open WhatsApp
   const shopPhone = "917090924592";
   const encodedMessage = encodeURIComponent(waMessage);

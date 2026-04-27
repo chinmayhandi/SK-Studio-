@@ -6,24 +6,93 @@ const products = [
     "price": 399,
     "oldPrice": 699,
     "image": "images/Frames/frame-1.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 399,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 999
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 3,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": true,
-    "isNewArrival": true
+    "isNewArrival": true,
+    "descriptionTitle": "Premium Birthday Photo Frame",
+    "descriptionText": "Celebrate your special moments with this beautiful customized birthday photo frame 🎉\n\nThis premium frame features a unique calendar design, where your special date is highlighted, along with a personalized message and multiple photo collage layout. The elegant black background with stars and moon gives a romantic and premium look, making it perfect for gifting your loved ones ❤️\n\nThis frame is designed to capture your memories, emotions, and love in one beautiful artwork.",
+    "customFeatures": [
+      "Your favorite photos 📸",
+      "Special date highlight 📅",
+      "Personal message 💌",
+      "Name customization ✨"
+    ],
+    "perfectFor": [
+      "Birthday Gifts 🎂",
+      "Anniversary Gifts 💑",
+      "Couple Gifts ❤️",
+      "Surprise Gifts 🎉"
+    ]
   },
   {
     "id": 2,
@@ -32,24 +101,93 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-2.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 5,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": true,
-    "isNewArrival": false
+    "isNewArrival": false,
+    "descriptionTitle": "Elegant Anniversary Collage Frame",
+    "descriptionText": "Commemorate your journey of love with our elegant anniversary collage frame ✨\n\nCrafted with premium materials, this frame allows you to showcase multiple cherished memories from your beautiful journey together. The sophisticated layout perfectly balances your photos with customizable text, ensuring your love story is told exactly how you remember it.\n\nThis frame is designed to capture your memories, emotions, and love in one beautiful artwork.",
+    "customFeatures": [
+      "Up to 5 favorite photos 📸",
+      "Custom anniversary date 📅",
+      "Heartfelt personal quote 💌",
+      "Premium finish options ✨"
+    ],
+    "perfectFor": [
+      "Anniversary Gifts 💑",
+      "Valentine's Day Gifts 💝",
+      "Couple Gifts ❤️",
+      "Wedding Gifts 💒"
+    ]
   },
   {
     "id": 3,
@@ -58,24 +196,93 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-3.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 15,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": true,
-    "isNewArrival": false
+    "isNewArrival": false,
+    "descriptionTitle": "Classic Couple Memory Frame",
+    "descriptionText": "Keep your favorite couple moments alive with this timeless classic memory frame 💫\n\nDesigned to highlight a single breathtaking photo or a beautiful collage of up to 15 images, this frame turns any ordinary picture into a museum-quality piece. With its sleek edges and high-quality glass, it brings a touch of modern elegance to any room.\n\nThis frame is designed to capture your memories, emotions, and love in one beautiful artwork.",
+    "customFeatures": [
+      "Single or 15-photo collage 📸",
+      "Elegant name engraving ✨",
+      "Custom border color 🎨",
+      "Premium mounting options 🖼️"
+    ],
+    "perfectFor": [
+      "Couple Gifts ❤️",
+      "Engagement Gifts 💍",
+      "Housewarming Gifts 🏡",
+      "Anniversary Gifts 💑"
+    ]
   },
   {
     "id": 4,
@@ -84,24 +291,93 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-4.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": true,
-    "isNewArrival": false
+    "isNewArrival": false,
+    "descriptionTitle": "Minimalist Custom Name Frame",
+    "descriptionText": "Simplicity meets elegance in this stunning minimalist custom name frame 🌟\n\nPerfect for modern homes, this frame emphasizes clean lines and focuses entirely on the beauty of your chosen photograph and customized names. It’s an understated yet deeply personal way to display what matters most to you.\n\nThis frame is designed to capture your memories, emotions, and love in one beautiful artwork.",
+    "customFeatures": [
+      "High-resolution photo print 📸",
+      "Minimalist typography name ✨",
+      "Sleek, slimline frame borders 🖼️",
+      "Choice of matte or gloss finish 🎨"
+    ],
+    "perfectFor": [
+      "Personal Keepsakes 💖",
+      "Minimalist Decor 🏡",
+      "Friendship Gifts 👯",
+      "Birthday Gifts 🎂"
+    ]
   },
   {
     "id": 5,
@@ -110,24 +386,93 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-5.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": true,
-    "isNewArrival": false
+    "isNewArrival": false,
+    "descriptionTitle": "Luxury Wedding Keepsake Frame",
+    "descriptionText": "Preserve the magic of your wedding day with our Luxury Wedding Keepsake Frame 💒\n\nThis opulent frame is crafted to be a showstopper, featuring exquisite detailing and premium materials that complement the grandeur of your wedding photos. It offers a majestic way to immortalize the day you said 'I do'.\n\nThis frame is designed to capture your memories, emotions, and love in one beautiful artwork.",
+    "customFeatures": [
+      "Premium wedding photo display 📸",
+      "Elegant gold or silver foiling ✨",
+      "Custom wedding date & venue 📅",
+      "Vows or special quote inclusion 💌"
+    ],
+    "perfectFor": [
+      "Wedding Gifts 💒",
+      "1st Anniversary Gifts 💍",
+      "Bridal Shower Gifts 🎁",
+      "Couple Gifts ❤️"
+    ]
   },
   {
     "id": 6,
@@ -136,24 +481,93 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-6.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": true,
-    "isNewArrival": false
+    "isNewArrival": false,
+    "descriptionTitle": "Vintage Style Memory Board",
+    "descriptionText": "Take a trip down memory lane with this uniquely crafted Vintage Style Memory Board 🕰️\n\nFor those who appreciate the charm of yesteryears, this frame offers a rustic, vintage aesthetic. It beautifully frames your modern memories in a classic design, giving a warm, nostalgic feel to your favorite moments.\n\nThis frame is designed to capture your memories, emotions, and love in one beautiful artwork.",
+    "customFeatures": [
+      "Vintage-treated photo print 📸",
+      "Rustic wooden frame finish 🌲",
+      "Classic typewriter font text 🖋️",
+      "Distressed edge detailing ✨"
+    ],
+    "perfectFor": [
+      "Parents' Anniversary Gifts 👵👴",
+      "Nostalgic Keepsakes 🕰️",
+      "Rustic Home Decor 🏡",
+      "Family Gifts 👨‍👩‍👧‍👦"
+    ]
   },
   {
     "id": 7,
@@ -162,24 +576,93 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-7.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": true,
-    "isNewArrival": false
+    "isNewArrival": false,
+    "descriptionTitle": "Dynamic LED Glowing Frame",
+    "descriptionText": "Brighten up your memories literally with our Dynamic LED Glowing Frame 💡\n\nThis state-of-the-art frame integrates soft, warm LED lighting that backlights your photo, creating a mesmerizing glowing effect. Perfect as a nightlight or a centerpiece that draws the eye, it ensures your memories shine brightly day and night.\n\nThis frame is designed to capture your memories, emotions, and love in one beautiful artwork.",
+    "customFeatures": [
+      "Built-in warm LED backlighting 💡",
+      "Vibrant backlit photo print 📸",
+      "Custom engraved message ✨",
+      "USB or battery operated 🔋"
+    ],
+    "perfectFor": [
+      "Nightstand Decor 🛏️",
+      "Surprise Gifts 🎉",
+      "Birthday Gifts 🎂",
+      "Modern Homes 🏡"
+    ]
   },
   {
     "id": 8,
@@ -188,24 +671,93 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-8.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": true,
-    "isNewArrival": false
+    "isNewArrival": false,
+    "descriptionTitle": "Family Tree Heritage Frame",
+    "descriptionText": "Celebrate your roots and loved ones with the beautiful Family Tree Heritage Frame 🌳\n\nThis expansive frame is designed to showcase the connections that matter most. With a beautiful tree motif layout, it elegantly displays photos of your family members, mapping out your heritage in a visually stunning display of love and legacy.\n\nThis frame is designed to capture your memories, emotions, and love in one beautiful artwork.",
+    "customFeatures": [
+      "Multiple family photo slots 📸",
+      "Custom family surname plaque ✨",
+      "Elegant tree branch design 🌳",
+      "Generation spanning dates 📅"
+    ],
+    "perfectFor": [
+      "Family Gifts 👨‍👩‍👧‍👦",
+      "Grandparents' Gifts 👵👴",
+      "Housewarming Gifts 🏡",
+      "Mother's/Father's Day Gifts 💝"
+    ]
   },
   {
     "id": 9,
@@ -214,24 +766,93 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-9.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
-    "isNewArrival": false
+    "isNewArrival": false,
+    "descriptionTitle": "Modern Acrylic Float Frame",
+    "descriptionText": "Experience your photos with the sleek, edge-to-edge Modern Acrylic Float Frame 💎\n\nFor a truly contemporary look, this frame sandwiches your vibrant photo between two thick blocks of crystal-clear acrylic. This creates a stunning 3D floating effect, adding incredible depth and luminosity to your most precious image.\n\nThis frame is designed to capture your memories, emotions, and love in one beautiful artwork.",
+    "customFeatures": [
+      "Crystal clear premium acrylic 💎",
+      "Stunning 3D floating effect ✨",
+      "Vibrant high-definition print 📸",
+      "Modern frameless design 🖼️"
+    ],
+    "perfectFor": [
+      "Modern Office Decor 🏢",
+      "Contemporary Homes 🏡",
+      "Professional Portraits 📸",
+      "Premium Gifts 🎁"
+    ]
   },
   {
     "id": 10,
@@ -240,24 +861,93 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-10.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
-    "isNewArrival": false
+    "isNewArrival": false,
+    "descriptionTitle": "Bespoke Grand Collage Frame",
+    "descriptionText": "Tell your complete story with the magnificent Bespoke Grand Collage Frame 🏰\n\nWhen one photo simply isn't enough, this grand frame offers a sprawling layout for a massive collection of your moments. It’s a carefully curated gallery of your life's best highlights, meticulously arranged to create a breathtaking focal point for any large wall.\n\nThis frame is designed to capture your memories, emotions, and love in one beautiful artwork.",
+    "customFeatures": [
+      "Large-scale multi-photo layout 📸",
+      "Premium museum-quality glass ✨",
+      "Customizable central highlight 🌟",
+      "Heavy-duty secure mounting 🛠️"
+    ],
+    "perfectFor": [
+      "Living Room Centerpieces 🛋️",
+      "Milestone Anniversaries 💑",
+      "Complete Travel Diaries ✈️",
+      "Ultimate Surprise Gifts 🎉"
+    ]
   },
   {
     "id": 11,
@@ -266,20 +956,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-11.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -292,20 +1037,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-12.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -318,20 +1118,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-13.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -344,20 +1199,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-14.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -370,20 +1280,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-15.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -396,20 +1361,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-16.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -422,20 +1442,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-17.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -448,20 +1523,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-18.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -474,20 +1604,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-19.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -500,20 +1685,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-20.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -526,20 +1766,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-21.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -552,20 +1847,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-22.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -578,20 +1928,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-23.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -604,20 +2009,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-24.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -630,20 +2090,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-25.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -656,20 +2171,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-26.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -682,20 +2252,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-27.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -708,20 +2333,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-28.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -734,20 +2414,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-29.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -760,20 +2495,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-30.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -786,20 +2576,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-31.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -812,20 +2657,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-32.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -838,20 +2738,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-33.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -864,20 +2819,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-34.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -890,20 +2900,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-35.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -916,20 +2981,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-36.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -942,20 +3062,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-37.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -968,20 +3143,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-38.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -994,20 +3224,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-39.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -1020,20 +3305,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-40.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -1046,20 +3386,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-41.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -1072,20 +3467,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-42.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -1098,20 +3548,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-43.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -1124,20 +3629,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-44.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -1150,20 +3710,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-45.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -1176,20 +3791,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-46.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -1202,20 +3872,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-47.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -1228,20 +3953,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-48.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -1254,20 +4034,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-49.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -1280,20 +4115,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-50.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -1306,20 +4196,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-51.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -1332,20 +4277,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-52.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -1358,20 +4358,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-53.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -1384,20 +4439,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-54.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -1410,20 +4520,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-55.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -1436,20 +4601,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-56.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -1462,20 +4682,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-57.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -1488,20 +4763,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-58.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -1514,20 +4844,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-59.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -1540,20 +4925,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-60.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -1566,20 +5006,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-61.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -1592,20 +5087,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-62.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -1618,20 +5168,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-63.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -1644,20 +5249,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-64.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -1670,20 +5330,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-65.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -1696,20 +5411,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-66.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -1722,20 +5492,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-67.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -1748,20 +5573,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-68.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -1774,20 +5654,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-69.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -1800,20 +5735,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-70.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -1826,20 +5816,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-71.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -1852,20 +5897,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-72.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -1878,20 +5978,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-73.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -1904,20 +6059,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-74.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -1930,20 +6140,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-75.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -1956,20 +6221,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-76.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -1982,20 +6302,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-77.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -2008,20 +6383,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-78.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -2034,20 +6464,75 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-79.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
@@ -2060,35 +6545,78 @@ const products = [
     "price": 499,
     "oldPrice": 699,
     "image": "images/Frames/frame-80.jpeg",
-    "sizes": [
-      {
-        "size": "8x12 inch",
-        "price": 499
+    "priceRange": "₹199 – ₹2999",
+    "frameTypes": {
+      "Classic Frame": {
+        "image": "images/Frames/frame-10.jpeg",
+        "prices": {
+          "8x12 inch": 199,
+          "10x12 inch": 249,
+          "12x18 inch": 399,
+          "16x20 inch": 599,
+          "18x24 inch": 799,
+          "24x36 inch": 999
+        }
       },
-      {
-        "size": "12x18 inch",
-        "price": 899
+      "Premium Frame": {
+        "image": "images/Frames/frame-20.jpeg",
+        "prices": {
+          "8x12 inch": 299,
+          "10x12 inch": 399,
+          "12x18 inch": 599,
+          "16x20 inch": 799,
+          "18x24 inch": 999,
+          "24x36 inch": 1499
+        }
       },
-      {
-        "size": "16x20 inch",
-        "price": 1299
+      "Wooden Frame": {
+        "image": "images/Frames/frame-30.jpeg",
+        "prices": {
+          "8x12 inch": 399,
+          "10x12 inch": 499,
+          "12x18 inch": 699,
+          "16x20 inch": 899,
+          "18x24 inch": 1199,
+          "24x36 inch": 1699
+        }
+      },
+      "Acrylic Frame": {
+        "image": "images/Frames/frame-40.jpeg",
+        "prices": {
+          "8x12 inch": 499,
+          "10x12 inch": 599,
+          "12x18 inch": 799,
+          "16x20 inch": 1099,
+          "18x24 inch": 1399,
+          "24x36 inch": 1999
+        }
+      },
+      "LED Frame": {
+        "image": "images/Frames/frame-50.jpeg",
+        "prices": {
+          "8x12 inch": 599,
+          "10x12 inch": 799,
+          "12x18 inch": 999,
+          "16x20 inch": 1299,
+          "18x24 inch": 1699,
+          "24x36 inch": 2499
+        }
+      },
+      "Luxury Frame": {
+        "image": "images/Frames/frame-60.jpeg",
+        "prices": {
+          "8x12 inch": 799,
+          "10x12 inch": 999,
+          "12x18 inch": 1299,
+          "16x20 inch": 1599,
+          "18x24 inch": 1999,
+          "24x36 inch": 2999
+        }
       }
-    ],
+    },
     "photoCount": 1,
     "description": "Beautiful customized photo frame perfect for your memories.",
     "isBestSeller": false,
     "isNewArrival": true
   }
-];
-
-const categories = [
-  "Photo Frames",
-  "LED Frames",
-  "Couple Gifts",
-  "Birthday Gifts",
-  "Anniversary Gifts",
-  "Personalized Mugs",
-  "Crystal Gifts",
-  "Keychains",
-  "Wedding Gifts"
 ];

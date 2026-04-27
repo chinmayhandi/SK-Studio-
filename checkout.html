@@ -15,7 +15,10 @@
       <div class="nav-left">
         <div class="menu-toggle"><i class="fas fa-bars"></i></div>
         <div class="logo">
-          <a href="index.html"><h1>Sk Studio <span>Gift</span></h1></a>
+          <a href="index.html" style="display:flex; flex-direction:column; line-height:1.2;">
+            <h1 style="font-size: 1.5rem; color: var(--primary-color); font-weight: 700; margin: 0;">SK Studio Gifts</h1>
+            <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 500;">Customized Gifts & Photo Frames</span>
+          </a>
         </div>
       </div>
       
@@ -36,6 +39,7 @@
       <div style="background:var(--bg-body); padding:20px; border-radius:var(--radius-sm); border:1px solid var(--border-color); margin-bottom:25px;">
         <h4 style="margin-bottom:15px; color:var(--primary-color);">1. Order Summary</h4>
         <p><strong>Product:</strong> <span id="chk-product"></span></p>
+        <p><strong>Frame Type:</strong> <span id="chk-frame-type"></span></p>
         <p><strong>Size:</strong> <span id="chk-size"></span></p>
         <p><strong>Quantity:</strong> <span id="chk-qty"></span></p>
         <p><strong>Total Price:</strong> <span id="chk-price" style="font-weight:700; color:var(--text-dark);"></span></p>
@@ -57,6 +61,11 @@
           <div id="chk-home-delivery-info" style="display:none; background:var(--bg-body); padding:10px; border-left:3px solid var(--primary-color); margin-top:10px; font-size:0.85rem; color:var(--text-muted);">
             Home delivery charge will be taken/updated in WhatsApp. Home delivery takes 5-7 business working days.
           </div>
+        </div>
+        
+        <div class="form-group" id="chk-collection-date-group" style="margin-bottom:25px; display:block;">
+          <label style="font-size:1rem; margin-bottom:10px; display:block; font-weight:500;">Select Collection Date <span style="color:red">*</span></label>
+          <input type="date" id="chk-collection-date" class="form-control" required>
         </div>
         
         <h4 style="margin-bottom:15px; color:var(--primary-color);">3. Your Information</h4>
@@ -125,7 +134,8 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-          <h3 style="color:var(--secondary-color); font-size:1.8rem;">Sk Studio Gift</h3>
+          <h3 style="color:var(--secondary-color); font-size:1.5rem; margin-bottom: 5px;">SK Studio Gifts</h3>
+          <p style="font-size: 0.85rem; color: #ccc; margin-bottom: 15px; margin-top: 0;">Customized Gifts & Photo Frames</p>
           <p>Personalized Gifts Made With Love. Your premium destination for customized keepsakes in Nidagundi.</p>
         </div>
       </div>
