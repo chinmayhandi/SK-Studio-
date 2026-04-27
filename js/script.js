@@ -655,8 +655,8 @@ function confirmWhatsAppOrder(e) {
   const pincode = document.getElementById('chk-pincode').value;
   const address = document.getElementById('chk-address').value;
   const instructions = document.getElementById('chk-instructions').value;
-  const collectionDateInput = document.getElementById('chk-collection-date');
-  const collectionDate = collectionDateInput ? collectionDateInput.value : '';
+  const collectionDateEl = document.getElementById('chk-collection-date');
+  const collectionDate = collectionDateEl ? collectionDateEl.value : '';
 
   // Construct WhatsApp Message exactly as requested
   let waMessage = `Hello Sk Studio Gift,\n\n`;
@@ -672,9 +672,6 @@ function confirmWhatsAppOrder(e) {
   waMessage += `Required Photos: ${data.photoCount} (Sending soon in Document Format)\n\n`;
 
   waMessage += `Delivery Option: ${deliveryOption}\n`;
-  if (deliveryOption === 'Store Collect' && collectionDate) {
-    waMessage += `Collection Date: ${collectionDate}\n`;
-  }
   waMessage += `Customer Name: ${name}\n`;
   waMessage += `Phone Number: ${phone}\n`;
   
@@ -682,7 +679,7 @@ function confirmWhatsAppOrder(e) {
     waMessage += `Address: ${address}\n`;
     waMessage += `Pincode: ${pincode}\n\n`;
   } else {
-    waMessage += `\n`;
+    waMessage += `Collection Date: ${collectionDate}\n\n`;
   }
 
   if (instructions) {
